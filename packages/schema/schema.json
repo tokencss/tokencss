@@ -1,0 +1,57 @@
+{
+  "$id": "https://tokencss.com/schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Token Config",
+  "type": "object",
+  "properties": {
+    "color": {
+      "type": { "ref": "#/$defs/tokens/color" }
+    }
+  },
+  "$defs": {
+    "values": {
+      "color": {
+        "$id": "#/$defs/values/color",
+        "description": "The value must be a string containing a hex triplet/quartet including the preceding # character",
+        "examples": ["#FFF"],
+        "title": "The color value",
+        "pattern": "^#[0-9a-fA-F]{3,4,6,8}",
+        "type": "string"
+      },
+      "cubic-bezier": {
+        "$id": "#/$defs/values/cubic-bezier",
+        "description": "The value must be a string containing a hex triplet/quartet including the preceding # character",
+        "examples": [[0, 0, 0, 1]],
+        "title": "The cubic-bezier value",
+        "minItems": 4,
+        "maxItems": 4,
+        "items": {
+          "anyOf": [
+            { "type": "integer" },
+            { "type": "number" }
+          ]
+        }
+      }
+    },
+    "tokens": {
+      "color": {
+        "$id": "#/$defs/tokens/color",
+        "type": "object",
+        "required": ["value"],
+        "properties": {
+          "type": { "enum": ["color"], "default": "color" },
+          "value": { "$ref": "#/$defs/values/color" }
+        }
+      },
+      "cubic-bezier": {
+        "$id": "#/$defs/tokens/cubic-bezier",
+        "type": "object",
+        "required": ["value"],
+        "properties": {
+          "type": { "enum": ["cubic-bezier"], "default": "cubic-bezier" },
+          "value": { "$ref": "#/$defs/values/cubic-bezier" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@tokencss/core",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "license": "MIT",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "esbuild src/index.ts src/css.ts src/categorize.ts src/tokens.ts --outdir=dist --target=es2020 --format=cjs --platform=node --watch",
+    "build": "esbuild src/index.ts src/css.ts src/categorize.ts src/tokens.ts --outdir=dist --target=es2020 --format=cjs --platform=node"
+  },
+  "dependencies": {
+    "dlv": "^1.1.3"
+  }
+}

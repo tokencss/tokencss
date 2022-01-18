@@ -1,0 +1,26 @@
+{
+  "name": "@tokencss/postcss",
+  "version": "0.0.1",
+  "license": "MIT",
+  "type": "commonjs",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "esbuild src/index.ts src/config.ts --outdir=dist --target=es2020 --format=cjs --platform=node --watch",
+    "build": "esbuild src/index.ts src/config.ts --outdir=dist --target=es2020 --format=cjs --platform=node"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.5"
+  },
+  "peerDependencies": {
+    "postcss": "^8.4.5"
+  },
+  "dependencies": {
+    "@proload/core": "^0.2.2",
+    "@proload/plugin-json": "^0.2.0",
+    "@tokencss/core": "0.0.1",
+    "magic-string": "^0.25.7",
+    "postcss-value-parser": "^4.2.0"
+  }
+}

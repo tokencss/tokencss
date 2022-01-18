@@ -1,0 +1,94 @@
+{
+  "$id": "https://tokencss.com/schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Token Config",
+  "type": "object",
+  "properties": {
+    "$schema": { "$ref": "#/schemas/url" },
+    "color": {
+      "type": "object"
+    }
+  },
+  "$defs": {
+    "url": {
+      "$id": "/schemas/url",
+      "format": "uri",
+      "pattern": "^https?://"
+    },
+    "Type": {
+      "type": "enum",
+      "enum": [
+        "color",
+        "dimension",
+        "font",
+        "duration",
+        "cubic-bezier"
+      ]
+    },
+    "Color": {
+      "$id": "/schemas/color",
+      "type": "object",
+      "required": [
+        "type",
+        "value"
+      ],
+      "properties": {
+        "type": {
+          "value": ""
+        }
+      }
+    },
+    "Token": {
+      "type": "object",
+      "required": [
+        "value"
+      ],
+      "properties": {
+        "description": {
+          "description": "A description of this token",
+          "type": "string"
+        },
+        "value": {
+          "description": "The value of this token",
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "CompositeToken": {
+      "type": "object",
+      "required": [
+        "value"
+      ],
+      "properties": {
+        "description": {
+          "description": "A description of this token",
+          "type": "string"
+        },
+        "value": {
+          "description": "The value of this token",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "type": "array"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

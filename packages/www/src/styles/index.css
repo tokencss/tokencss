@@ -1,0 +1,6 @@
+@inject "tokencss:base";
+@inject "tokencss:container";
+
+.container {
+    background: whitesmoke;
+}

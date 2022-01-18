@@ -1,0 +1,16 @@
+{
+  "name": "@tokencss/root",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "test": "tsm node_modules/uvu/bin.js packages test -i fixtures"
+  },
+  "devDependencies": {
+    "tsm": "^2.2.1",
+    "uvu": "^0.5.3",
+    "esbuild": "^0.14.11"
+  },
+  "volta": {
+    "node": "16.13.2"
+  }
+}
