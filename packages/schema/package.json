@@ -1,9 +1,0 @@
-{
-    "name": "@tokencss/schema",
-    "version": "0.0.1",
-    "exports": {
-        ".": "./index.cjs",
-        "./schema.json": "./schema.json",
-        "./package.json": "./package.json"
-    }
-}
