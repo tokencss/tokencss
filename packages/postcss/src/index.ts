@@ -77,8 +77,10 @@ const tokencss: postcss.PluginCreator<TokenCSSOptions> = ({ cwd = process.cwd(),
                         const screens = Object.values(tokens.media).filter(({ value }: any) => value.includes('(min-width:')).map(({ value }: any) => value);
                         let result = '';
                         result += `\n.container {`;
-                        result += `\n  width: 100vw;`;
-                        result += `\n  max-width: calc(var(--container-max-width, 100%) - calc(var(--container-padding-inline, 0.75rem) * 2));`;
+                        result += `\n  width: calc(100% - calc(var(--container-margin-inline, 0.75rem) * 2));`;
+                        result += `\n  max-width: calc(var(--container-max-width, 100%) - calc(var(--container-margin-inline, 0.75rem) * 2));`;
+                        result += `\n  padding-right: var(--container-padding-inline, 0);`;
+                        result += `\n  padding-left: var(--container-padding-inline, 0);`;
                         result += `\n  margin-right: auto;`;
                         result += `\n  margin-left: auto;`;
                         result += `\n}`;

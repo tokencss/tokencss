@@ -1,0 +1,50 @@
+@inject "tokencss:base";
+@inject "tokencss:container";
+
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans;
+    color: red.6;
+
+    @media (sm) {
+        color: blue.6;
+    }
+
+    @media (lg) {
+        color: green.6;
+    }
+}
+
+main {
+    min-height: screen;
+    background: white;
+    padding-block: md;
+}
+
+.boxes {
+    display: flex;
+    gap: sm;
+    margin-top: 4xl;
+}
+
+.box {
+    --size: 6xl;
+    --bg: red.6;
+    width: var(--size);
+    height: var(--size);
+    background: var(--bg);
+    box-shadow: xl;
+
+    &:first-child {
+        --bg: blue.6;
+    }
+
+    &:last-child {
+        --bg: green.6;
+    }
+}

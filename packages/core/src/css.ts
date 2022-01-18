@@ -13,6 +13,7 @@ export function serializeTokensToCSS(tokens: Tokens) {
         const key = pathToVarName(token.$path);
         if (token.$scale === 'media') {
             media.push(key);
+            sheet += `\n  ${key}: ${token.value};`
             continue;
         };
         const value = serializeToken(token);
@@ -39,6 +40,7 @@ function serializeToken(token: Token) {
     switch (token.type) {
         case 'string': return `"${token.value}"`;
         case 'number': return `${token.value}`;
+        case 'null': return '';
         case 'boolean': return `${token.value}`;
         case 'color': return `${token.value}`;
         case 'dimension': return `${token.value}`;
@@ -54,24 +56,26 @@ function serializeToken(token: Token) {
 function serializeShadow(composite: { x: Record<string, any>, y: Record<string, any>, blur: Record<string, any>, color: Record<string, any>, spread?: Record<string, any>, opacity?: Record<string, any> }) {
     let result = '';
     for (const key of ['x', 'y', 'blur', 'spread']) {
-        const token = composite[key];
+        const token = composite[key].value;
         if (token.$path) {
             result += `var(${pathToVarName(token.$path)})`
         } else {
             result += ` ${token.value}`
         }
     }
+    const color = composite['color'].value;
     result += ` rgba(`;
-    if (composite.color.$path) {
-        result += `var(${pathToVarName(composite.color.$path)}-rgb)`
+    if (color.$path) {
+        result += `var(${pathToVarName(color.$path)}-rgb)`
     } else {
-        result += `${hexToRGBList(composite.color.value)}`;
+        result += `${hexToRGBList(color.value)}`;
     }
     result += ', ';
-    if (composite.opacity.$path) {
-        result += `var(${pathToVarName(composite.opacity.$path)})`
+    const opacity = composite['opacity'].value;
+    if (opacity.$path) {
+        result += `var(${pathToVarName(opacity.$path)})`
     } else {
-        result += `${composite.opacity.value}`;
+        result += `${opacity.value}`;
     }
 
     result += `)`;

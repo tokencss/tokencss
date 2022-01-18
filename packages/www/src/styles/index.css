@@ -4,3 +4,9 @@
 .container {
     background: whitesmoke;
 }
+
+@media (sm) {
+    .container {
+        background: red.0;
+    }
+}

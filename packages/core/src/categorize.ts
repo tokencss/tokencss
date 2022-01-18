@@ -130,34 +130,47 @@ const properties = new Map([
     ['max-height', ['height', 'size', 'space']],
 ]);
 
+const cache = new Map();
 export function categorize(property: string, value: string, ctx: { scales: Partial<Record<Scale, string[]>> }): Scale|undefined {
     // ignore custom property values
     if (value.charAt(0) === '-' && value.charAt(1) === '-') {
         return;
     }
+    const cacheKey = `${property}:${value}`;
     // normalize custom property declarations
     if (property.charAt(0) === '-' && property.charAt(1) === '-') {
         property = property.slice(2)
     }
+    // if (cache.has(cacheKey)) {
+    //     return cache.get(cacheKey)
+    // }
     if (properties.has(property)) {
+        if (property === 'box-shadow') {
+            console.log(property, value);
+        }
+
         const scales = properties.get(property);
+        if (property === 'box-shadow') {
+            console.log(scales);
+        }
         for (const [scale, values] of Object.entries(ctx.scales)) {
+            if (property === 'box-shadow') {
+                console.log(scale);
+            }
             if (!scales.includes(scale)) continue;
-            if (Array.isArray(values)) {
-                for (const v of values) {
-                    if (value === v) {
-                        return scale as Scale;
-                    }
+            for (const v of Object.keys(values)) {
+                if (value === v) {
+                    cache.set(cacheKey, scale)
+                    return scale as Scale;
                 }
             }
         }
     } else {
-        for (const [scale, properties] of Object.entries(scales)) {
-            if (ctx.scales[scale]) {
-                for (const p of properties) {
-                    if (property === p) {
-                        return scale as Scale;
-                    }
+        for (const [scale, props] of Object.entries(scales)) {
+            for (const p of props) {
+                if (property === p) {
+                    cache.set(cacheKey, scale)
+                    return scale as Scale;
                 }
             }
         }

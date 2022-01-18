@@ -138,14 +138,14 @@ function deriveTokenScale(token: Token, tokens: Record<string, any>): Token {
         token.$scale = n[0];
         return token;
     }
-    if (typeof token.extensions === 'object' && token.extensions['build.astro.scale']) {
-        token.$scale = token.extensions['build.astro.scale'];
+    if (typeof token.extensions === 'object' && token.extensions['com.tokencss.scale']) {
+        token.$scale = token.extensions['com.tokencss.scale'];
         return token;
     }
     while (!token.$scale) {
         n = n.slice(0, -1);
         if (n.length === 0) break;
-        token.$scale = dlv(tokens, `${n.join('.')}.extensions`)?.['build.astro.scale']
+        token.$scale = dlv(tokens, `${n.join('.')}.extensions`)?.['com.tokencss.scale']
     }
     if (!token.$scale) {
         token.$scale = 'unknown';
