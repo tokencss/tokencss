@@ -4,7 +4,9 @@
   "type": "commonjs",
   "license": "MIT",
   "exports": {
-    ".": "./dist/index.js"
+    ".": "./dist/index.js",
+    "./base": "./base.json",
+    "./base.json": "./base.json"
   },
   "scripts": {
     "dev": "esbuild src/index.ts src/css.ts src/categorize.ts src/tokens.ts --outdir=dist --target=es2020 --format=cjs --platform=node --watch",

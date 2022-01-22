@@ -1,0 +1,55 @@
+{
+  "$schema": "https://tokencss.com/schema@0.0.1",
+  "media": {
+    "type": "media"
+  },
+  "color": {
+    "type": "color"
+  },
+  "space": {
+    "type": "dimension",
+    "extensions": { "com.tokencss.scale": "space" }
+  },
+  "size": {
+    "type": "dimension",
+    "extensions": { "com.tokencss.scale": "size" }
+  },
+  "width": {
+    "type": "dimension",
+    "extensions": { "com.tokencss.scale": "width" }
+  },
+  "height": {
+    "type": "dimension",
+    "extensions": { "com.tokencss.scale": "height" }
+  },
+  "radius": {
+    "type": "dimension"
+  },
+  "shadow": {
+    "type": "shadow"
+  },
+  "font": {
+    "type": "font"
+  },
+  "font-size": {
+    "type": "dimension",
+    "extensions": {
+      "com.tokencss.scale": "font-size"
+    }
+  },
+  "font-weight": {
+    "type": "number",
+    "extensions": {
+      "com.tokencss.scale": "font-weight"
+    }
+  },
+  "letter-spacing": {
+    "type": "dimension",
+    "extensions": {
+      "com.tokencss.scale": "letter-spacing"
+    }
+  },
+  "easing": {
+    "type": "cubic-bezier"
+  }
+}
