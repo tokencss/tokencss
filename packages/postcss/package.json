@@ -1,6 +1,6 @@
 {
   "name": "@tokencss/postcss",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -23,7 +23,7 @@
   "dependencies": {
     "@proload/core": "^0.2.2",
     "@proload/plugin-json": "^0.2.0",
-    "@tokencss/core": "workspace:*",
+    "@tokencss/core": "^0.0.1",
     "magic-string": "^0.25.7",
     "postcss-value-parser": "^4.2.0"
   }
