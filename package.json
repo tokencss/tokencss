@@ -6,11 +6,14 @@
     "test": "tsm node_modules/uvu/bin.js packages test -i fixtures -i test-utils.ts"
   },
   "devDependencies": {
+    "esbuild": "^0.14.11",
     "tsm": "^2.2.1",
-    "uvu": "^0.5.3",
-    "esbuild": "^0.14.11"
+    "uvu": "^0.5.3"
   },
   "volta": {
     "node": "16.13.2"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.21.1"
   }
 }
