@@ -1,8 +1,12 @@
 {
   "name": "@tokencss/postcss",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "type": "module",
+  "files": [
+    "plugin.cjs",
+    "dist"
+  ],
   "exports": {
     ".": {
       "import": "./dist/index.js",
