@@ -1,6 +1,6 @@
 {
   "$schema": "https://tokencss.com/schema@0.0.1",
-  "extends": ["@tokencss/core/base"],
+  "extends": ["@tokencss/core"],
   "media": {
     "sm": { "value": "(min-width: 640px)" },
     "md": { "value": "(min-width: 768px)" },

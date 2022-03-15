@@ -43,6 +43,12 @@
       "com.tokencss.scale": "font-weight"
     }
   },
+  "line-height": {
+    "type": "number",
+    "extensions": {
+      "com.tokencss.scale": "line-height"
+    }
+  },
   "letter-spacing": {
     "type": "dimension",
     "extensions": {

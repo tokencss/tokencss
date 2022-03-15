@@ -24,7 +24,7 @@ function findTokens(nodes: Node[], prop: string, scales: any): (WordNode & { tok
             case 'function': return walk(n.nodes, n);
             case 'word': {
                 const scale = categorize(prop, n.value, { scales });
-                if (scale) {
+                if (scale && scales[scale]) {
                     const token = scales[scale][n.value];
                     const path = token?.$path;
                     if (path) {
@@ -35,8 +35,6 @@ function findTokens(nodes: Node[], prop: string, scales: any): (WordNode & { tok
                         }
                         words.push(Object.assign(n, { token: varName }));
                     }
-                } else if (scale) {
-                    console.log(prop, n.value, scale)
                 }
                 return;
             }

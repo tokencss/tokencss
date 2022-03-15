@@ -10,6 +10,6 @@
         "vite": "^2.7.12"
     },
     "devDependencies": {
-        "@tokencss/postcss": "0.0.1"
+        "@tokencss/postcss": "workspace:*"
     }
 }

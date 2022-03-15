@@ -81,6 +81,7 @@ test("@media generated vars", async () => {
   assert.is(
     css,
     `:root {
+  --media-sm: (min-width: 640px);
   --tokencss: 1;
   --tokencss-media: var(--media-sm);
 }`
@@ -101,6 +102,8 @@ test("@media generated vars (multiple)", async () => {
   assert.is(
     css,
     `:root {
+  --media-sm: (min-width: 640px);
+  --media-md: (min-width: 820px);
   --tokencss: 1;
   --tokencss-media: var(--media-sm), var(--media-md);
 }`
@@ -121,8 +124,10 @@ test("@inject \"tokencss:container\";", async () => {
   assert.is(
     css,
     `.container {
-  width: 100vw;
-  max-width: calc(var(--container-max-width, 100%) - calc(var(--container-padding-inline, 0.75rem) * 2));
+  width: calc(100% - calc(var(--container-margin-inline, 0.75rem) * 2));
+  max-width: calc(var(--container-max-width, 100%) - calc(var(--container-margin-inline, 0.75rem) * 2));
+  padding-right: var(--container-padding-inline, 0);
+  padding-left: var(--container-padding-inline, 0);
   margin-right: auto;
   margin-left: auto;
 }

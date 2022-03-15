@@ -141,24 +141,14 @@ export function categorize(property: string, value: string, ctx: { scales: Parti
     if (property.charAt(0) === '-' && property.charAt(1) === '-') {
         property = property.slice(2)
     }
-    // if (cache.has(cacheKey)) {
-    //     return cache.get(cacheKey)
-    // }
+    if (cache.has(cacheKey)) {
+        return cache.get(cacheKey)
+    }
     if (properties.has(property)) {
-        if (property === 'box-shadow') {
-            console.log(property, value);
-        }
-
         const scales = properties.get(property);
-        if (property === 'box-shadow') {
-            console.log(scales);
-        }
         for (const [scale, values] of Object.entries(ctx.scales)) {
-            if (property === 'box-shadow') {
-                console.log(scale);
-            }
             if (!scales.includes(scale)) continue;
-            for (const v of Object.keys(values)) {
+            for (const v of Object.values(values)) {
                 if (value === v) {
                     cache.set(cacheKey, scale)
                     return scale as Scale;

@@ -1,16 +1,16 @@
 {
   "name": "@tokencss/core",
   "version": "0.0.1",
-  "type": "commonjs",
+  "type": "module",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js",
-    "./base": "./base.json",
-    "./base.json": "./base.json"
+    "./package.json": "./package.json",
+    "./token.config.json": "./token.config.json"
   },
   "scripts": {
-    "dev": "esbuild src/index.ts src/css.ts src/categorize.ts src/tokens.ts --outdir=dist --target=es2020 --format=cjs --platform=node --watch",
-    "build": "esbuild src/index.ts src/css.ts src/categorize.ts src/tokens.ts --outdir=dist --target=es2020 --format=cjs --platform=node"
+    "dev": "esbuild src/index.ts src/css.ts src/categorize.ts src/tokens.ts --outdir=dist --target=es2020 --format=esm --platform=node --watch",
+    "build": "esbuild src/index.ts src/css.ts src/categorize.ts src/tokens.ts --outdir=dist --target=es2020 --format=esm --platform=node"
   },
   "dependencies": {
     "dlv": "^1.1.3"

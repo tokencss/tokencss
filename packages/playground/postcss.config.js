@@ -1,5 +1,6 @@
 const postcssPresetEnv  = require('postcss-preset-env')
-const { default: tokencss } = require('@tokencss/postcss');
+const tokencss = require('@tokencss/postcss');
+console.log(tokencss());
 
 module.exports = {
     plugins: [

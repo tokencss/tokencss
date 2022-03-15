@@ -27,6 +27,10 @@ export function serializeTokensToCSS(tokens: Tokens) {
         if (token.type === 'color') {
             sheet += `\n  ${key}-rgb: ${hexToRGBList(value)};`
         }
+        if (token.type === 'dimension' && token.extensions?.['com.tokencss.fluid']) {
+            // console.log(token);
+            // sheet += `\n  ${key}-rgb: ${hexToRGBList(value)};`
+        }
     }
     sheet += `\n  --tokencss: 1;`;
     if (media.length > 0) {
@@ -46,7 +50,7 @@ function serializeToken(token: Token) {
         case 'dimension': return `${token.value}`;
         case 'cubic-bezier': return `cubic-bezier(${(token.value as number[]).join(', ')})`;
         case 'font': return (token.value as string[]).map(value => value.includes(' ') ? `"${value}"` : value).join(', ');
-        case '{$types.shadow}': {
+        case 'shadow': {
             if (Array.isArray(token.value)) return token.value.map(shadow => serializeShadow(shadow as any)).join(', ');
             return serializeShadow(token.value as any);
         }
@@ -55,15 +59,15 @@ function serializeToken(token: Token) {
 
 function serializeShadow(composite: { x: Record<string, any>, y: Record<string, any>, blur: Record<string, any>, color: Record<string, any>, spread?: Record<string, any>, opacity?: Record<string, any> }) {
     let result = '';
-    for (const key of ['x', 'y', 'blur', 'spread']) {
-        const token = composite[key].value;
+    for (const key of ['offset-x', 'offset-y', 'blur', 'spread']) {
+        const token = composite[key];
         if (token.$path) {
             result += `var(${pathToVarName(token.$path)})`
         } else {
             result += ` ${token.value}`
         }
     }
-    const color = composite['color'].value;
+    const color = composite['color'];
     result += ` rgba(`;
     if (color.$path) {
         result += `var(${pathToVarName(color.$path)}-rgb)`
@@ -71,7 +75,7 @@ function serializeShadow(composite: { x: Record<string, any>, y: Record<string, 
         result += `${hexToRGBList(color.value)}`;
     }
     result += ', ';
-    const opacity = composite['opacity'].value;
+    const opacity = composite['opacity'];
     if (opacity.$path) {
         result += `var(${pathToVarName(opacity.$path)})`
     } else {
