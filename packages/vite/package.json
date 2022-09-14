@@ -1,0 +1,17 @@
+{
+  "name": "@tokencss/vite",
+  "version": "0.0.1",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
+  "scripts": {
+    "dev": "esbuild src/index.ts src/config.ts --outdir=dist --target=es2020 --format=esm --platform=node --watch",
+    "build": "esbuild src/index.ts src/config.ts --outdir=dist --target=es2020 --format=esm --platform=node"
+  },
+  "dependencies": {
+    "@tokencss/postcss": "workspace:*",
+    "postcss-preset-env": "^7.2.3"
+  }
+}

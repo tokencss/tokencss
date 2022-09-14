@@ -27,7 +27,7 @@
   "dependencies": {
     "@proload/core": "^0.2.2",
     "@proload/plugin-json": "^0.2.0",
-    "@tokencss/core": "^0.0.1",
+    "@tokencss/core": "workspace:*",
     "magic-string": "^0.25.7",
     "postcss-value-parser": "^4.2.0"
   }

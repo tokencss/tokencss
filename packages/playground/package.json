@@ -1,15 +1,16 @@
 {
     "name": "@tokencss/playground",
+    "type": "module",
     "version": "0.0.1",
     "private": true,
     "scripts": {
         "dev": "vite dev"
     },
     "dependencies": {
-        "postcss-preset-env": "^7.2.3",
         "vite": "^2.7.12"
     },
     "devDependencies": {
-        "@tokencss/postcss": "workspace:*"
+        "@tokencss/vite": "workspace:*",
+        "@tokencss/core": "workspace:*"
     }
 }

@@ -1,4 +1,4 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 importers:
 
@@ -24,15 +24,13 @@ importers:
   packages/playground:
     specifiers:
       '@tokencss/core': workspace:*
-      '@tokencss/postcss': workspace:*
-      postcss-preset-env: ^7.2.3
+      '@tokencss/vite': workspace:*
       vite: ^2.7.12
     dependencies:
-      postcss-preset-env: 7.2.3
       vite: 2.7.12
     devDependencies:
       '@tokencss/core': link:../core
-      '@tokencss/postcss': link:../postcss
+      '@tokencss/vite': link:../vite
 
   packages/postcss:
     specifiers:
@@ -53,6 +51,14 @@ importers:
 
   packages/preset-tailwind:
     specifiers: {}
+
+  packages/vite:
+    specifiers:
+      '@tokencss/postcss': workspace:*
+      postcss-preset-env: ^7.2.3
+    dependencies:
+      '@tokencss/postcss': link:../postcss
+      postcss-preset-env: 7.2.3
 
 packages:
 
@@ -1392,7 +1398,7 @@ packages:
     dev: false
 
   /normalize-range/0.1.2:
-    resolution: {integrity: sha1-LRDAa9/TEuqXd2laTShDlFa3WUI=}
+    resolution: {integrity: sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==}
     engines: {node: '>=0.10.0'}
     dev: false
 
@@ -2100,7 +2106,7 @@ packages:
     dev: false
 
   /util-deprecate/1.0.2:
-    resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=}
+    resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: false
 
   /uvu/0.5.3:
