@@ -27,10 +27,6 @@ export function serializeTokensToCSS(tokens: Tokens) {
         if (token.type === 'color') {
             sheet += `\n  ${key}-rgb: ${hexToRGBList(value)};`
         }
-        if (token.type === 'dimension' && token.extensions?.['com.tokencss.fluid']) {
-            // console.log(token);
-            // sheet += `\n  ${key}-rgb: ${hexToRGBList(value)};`
-        }
     }
     sheet += `\n  --tokencss: 1;`;
     if (media.length > 0) {
@@ -57,14 +53,14 @@ function serializeToken(token: Token) {
     }
 }
 
-function serializeShadow(composite: { x: Record<string, any>, y: Record<string, any>, blur: Record<string, any>, color: Record<string, any>, spread?: Record<string, any>, opacity?: Record<string, any> }) {
+function serializeShadow(composite: { 'offset-x': Record<string, any> | string, 'offset-y': Record<string, any> | string, blur: Record<string, any> | string, color: Record<string, any> | string, spread?: Record<string, any> | string, opacity?: Record<string, any> | string }) {
     let result = '';
     for (const key of ['offset-x', 'offset-y', 'blur', 'spread']) {
         const token = composite[key];
         if (token.$path) {
             result += `var(${pathToVarName(token.$path)})`
         } else {
-            result += ` ${token.value}`
+            result += ` ${token}`
         }
     }
     const color = composite['color'];
@@ -72,14 +68,14 @@ function serializeShadow(composite: { x: Record<string, any>, y: Record<string, 
     if (color.$path) {
         result += `var(${pathToVarName(color.$path)}-rgb)`
     } else {
-        result += `${hexToRGBList(color.value)}`;
+        result += `${hexToRGBList(color)}`;
     }
     result += ', ';
-    const opacity = composite['opacity'];
+    const opacity = composite['opacity'] ?? '1';
     if (opacity.$path) {
         result += `var(${pathToVarName(opacity.$path)})`
     } else {
-        result += `${opacity.value}`;
+        result += `${opacity}`;
     }
 
     result += `)`;
