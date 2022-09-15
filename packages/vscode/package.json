@@ -1,0 +1,54 @@
+{
+	"name": "tokencss-vscode",
+	"displayName": "Token CSS",
+	"version": "0.0.1",
+	"publisher": "tokencss",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.42.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"workspaceContains:**/token.config.json"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "tokencss.helloWorld",
+				"title": "Token CSS: Hello World"
+			}
+		],
+		"semanticTokenTypes": [
+			{
+				"id": "token",
+				"superType": "keyword",
+				"description": "A design token"
+			}
+		]
+	},
+	"scripts": {
+		"dev": "tsc -watch -p ./",
+		"build": "tsc -p ./",
+		"lint": "eslint . --ext .ts,.tsx",
+		"vscode:prepublish": "npm run build"
+	},
+	"devDependencies": {
+		"@types/node": "^16.11.7",
+		"@types/vscode": "^1.42.0",
+		"@typescript-eslint/eslint-plugin": "^5.30.0",
+		"@typescript-eslint/parser": "^5.30.0",
+		"eslint": "^8.13.0",
+		"typescript": "^4.7.2"
+	},
+	"dependencies": {
+		"@tokencss/core": "workspace:*",
+		"@tokencss/postcss": "workspace:*",
+		"postcss": "^8.4.5",
+		"postcss-preset-env": "^7.8.1",
+		"postcss-safe-parser": "^6.0.0",
+		"ultrahtml": "^0.0.5"
+	}
+}
