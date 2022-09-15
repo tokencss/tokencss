@@ -1,0 +1,448 @@
+{
+  "$schema": "https://tokencss.com/schema@0.0.1",
+  "extends": ["@tokencss/core"],
+  "media": {
+    "sm": { "value": "(min-width: 640px)" },
+    "md": { "value": "(min-width: 768px)" },
+    "lg": { "value": "(min-width: 1024px)" },
+    "xl": { "value": "(min-width: 1280px)" },
+    "2xl": { "value": "(min-width: 1536px)" }
+  },
+  "color": {
+    "gray": {
+      "0": { "value": "#f8f9fa" },
+      "1": { "value": "#f1f3f5" },
+      "2": { "value": "#e9ecef" },
+      "3": { "value": "#dee2e6" },
+      "4": { "value": "#ced4da" },
+      "5": { "value": "#adb5bd" },
+      "6": { "value": "#868e96" },
+      "7": { "value": "#495057" },
+      "8": { "value": "#343a40" },
+      "9": { "value": "#212529" }
+    },
+    "red": {
+      "0": { "value": "#fff5f5" },
+      "1": { "value": "#ffe3e3" },
+      "2": { "value": "#ffc9c9" },
+      "3": { "value": "#ffa8a8" },
+      "4": { "value": "#ff8787" },
+      "5": { "value": "#ff6b6b" },
+      "6": { "value": "#fa5252" },
+      "7": { "value": "#f03e3e" },
+      "8": { "value": "#e03131" },
+      "9": { "value": "#c92a2a" }
+    },
+    "pink": {
+      "0": { "value": "#fff0f6" },
+      "1": { "value": "#ffdeeb" },
+      "2": { "value": "#fcc2d7" },
+      "3": { "value": "#faa2c1" },
+      "4": { "value": "#f783ac" },
+      "5": { "value": "#f06595" },
+      "6": { "value": "#e64980" },
+      "7": { "value": "#d6336c" },
+      "8": { "value": "#c2255c" },
+      "9": { "value": "#a61e4d" }
+    },
+    "grape": {
+      "0": { "value": "#f8f0fc" },
+      "1": { "value": "#f3d9fa" },
+      "2": { "value": "#eebefa" },
+      "3": { "value": "#e599f7" },
+      "4": { "value": "#da77f2" },
+      "5": { "value": "#cc5de8" },
+      "6": { "value": "#be4bdb" },
+      "7": { "value": "#ae3ec9" },
+      "8": { "value": "#9c36b5" },
+      "9": { "value": "#862e9c" }
+    },
+    "violet": {
+      "0": { "value": "#f3f0ff" },
+      "1": { "value": "#e5dbff" },
+      "2": { "value": "#d0bfff" },
+      "3": { "value": "#b197fc" },
+      "4": { "value": "#9775fa" },
+      "5": { "value": "#845ef7" },
+      "6": { "value": "#7950f2" },
+      "7": { "value": "#7048e8" },
+      "8": { "value": "#6741d9" },
+      "9": { "value": "#5f3dc4" }
+    },
+    "indigo": {
+      "0": { "value": "#edf2ff" },
+      "1": { "value": "#dbe4ff" },
+      "2": { "value": "#bac8ff" },
+      "3": { "value": "#91a7ff" },
+      "4": { "value": "#748ffc" },
+      "5": { "value": "#5c7cfa" },
+      "6": { "value": "#4c6ef5" },
+      "7": { "value": "#4263eb" },
+      "8": { "value": "#3b5bdb" },
+      "9": { "value": "#364fc7" }
+    },
+    "blue": {
+      "0": { "value": "#e7f5ff" },
+      "1": { "value": "#d0ebff" },
+      "2": { "value": "#a5d8ff" },
+      "3": { "value": "#74c0fc" },
+      "4": { "value": "#4dabf7" },
+      "5": { "value": "#339af0" },
+      "6": { "value": "#228be6" },
+      "7": { "value": "#1c7ed6" },
+      "8": { "value": "#1971c2" },
+      "9": { "value": "#1864ab" }
+    },
+    "cyan": {
+      "0": { "value": "#e3fafc" },
+      "1": { "value": "#c5f6fa" },
+      "2": { "value": "#99e9f2" },
+      "3": { "value": "#66d9e8" },
+      "4": { "value": "#3bc9db" },
+      "5": { "value": "#22b8cf" },
+      "6": { "value": "#15aabf" },
+      "7": { "value": "#1098ad" },
+      "8": { "value": "#0c8599" },
+      "9": { "value": "#0b7285" }
+    },
+    "teal": {
+      "0": { "value": "#e6fcf5" },
+      "1": { "value": "#c3fae8" },
+      "2": { "value": "#96f2d7" },
+      "3": { "value": "#63e6be" },
+      "4": { "value": "#38d9a9" },
+      "5": { "value": "#20c997" },
+      "6": { "value": "#12b886" },
+      "7": { "value": "#0ca678" },
+      "8": { "value": "#099268" },
+      "9": { "value": "#087f5b" }
+    },
+    "green": {
+      "0": { "value": "#ebfbee" },
+      "1": { "value": "#d3f9d8" },
+      "2": { "value": "#b2f2bb" },
+      "3": { "value": "#8ce99a" },
+      "4": { "value": "#69db7c" },
+      "5": { "value": "#51cf66" },
+      "6": { "value": "#40c057" },
+      "7": { "value": "#37b24d" },
+      "8": { "value": "#2f9e44" },
+      "9": { "value": "#2b8a3e" }
+    },
+    "lime": {
+      "0": { "value": "#f4fce3" },
+      "1": { "value": "#e9fac8" },
+      "2": { "value": "#d8f5a2" },
+      "3": { "value": "#c0eb75" },
+      "4": { "value": "#a9e34b" },
+      "5": { "value": "#94d82d" },
+      "6": { "value": "#82c91e" },
+      "7": { "value": "#74b816" },
+      "8": { "value": "#66a80f" },
+      "9": { "value": "#5c940d" }
+    },
+    "yellow": {
+      "0": { "value": "#fff9db" },
+      "1": { "value": "#fff3bf" },
+      "2": { "value": "#ffec99" },
+      "3": { "value": "#ffe066" },
+      "4": { "value": "#ffd43b" },
+      "5": { "value": "#fcc419" },
+      "6": { "value": "#fab005" },
+      "7": { "value": "#f59f00" },
+      "8": { "value": "#f08c00" },
+      "9": { "value": "#e67700" }
+    },
+    "orange": {
+      "0": { "value": "#fff4e6" },
+      "1": { "value": "#ffe8cc" },
+      "2": { "value": "#ffd8a8" },
+      "3": { "value": "#ffc078" },
+      "4": { "value": "#ffa94d" },
+      "5": { "value": "#ff922b" },
+      "6": { "value": "#fd7e14" },
+      "7": { "value": "#f76707" },
+      "8": { "value": "#e8590c" },
+      "9": { "value": "#d9480f" }
+    }
+  },
+  "space": {
+    "2xs": { "value": ".25rem" },
+    "xs": { "value": ".5rem" },
+    "sm": { "value": "1rem" },
+    "md": { "value": "1.25rem" },
+    "lg": { "value": "1.5rem" },
+    "xl": { "value": "1.75rem" },
+    "2xl": { "value": "2rem" },
+    "3xl": { "value": "3rem" },
+    "4xl": { "value": "4rem" },
+    "5xl": { "value": "5rem" },
+    "6xl": { "value": "7.5rem" },
+    "7xl": { "value": "10rem" },
+    "8xl": { "value": "15rem" },
+    "9xl": { "value": "20rem" },
+    "10xl": { "value": "30rem" }
+  },
+  "size": {
+    "full": { "value": "100%" },
+    "2xs": { "value": ".25rem" },
+    "xs": { "value": ".5rem" },
+    "sm": { "value": "1rem" },
+    "md": { "value": "1.25rem" },
+    "lg": { "value": "1.5rem" },
+    "xl": { "value": "1.75rem" },
+    "2xl": { "value": "2rem" },
+    "3xl": { "value": "3rem" },
+    "4xl": { "value": "4rem" },
+    "5xl": { "value": "5rem" },
+    "6xl": { "value": "7.5rem" },
+    "7xl": { "value": "10rem" },
+    "8xl": { "value": "15rem" },
+    "9xl": { "value": "20rem" },
+    "10xl": { "value": "30rem" }
+  },
+  "width": {
+    "screen": { "value": "100vw" }
+  },
+  "height": {
+    "screen": { "value": "100vh" }
+  },
+  "radius": {
+    "none": { "value": "0px" },
+    "sm": { "value": "0.125rem" },
+    "default": { "value": "0.25rem" },
+    "md": { "value": "0.375rem" },
+    "lg": { "value": "0.5rem" },
+    "xl": { "value": "0.75rem" },
+    "2xl": { "value": "1rem" },
+    "3xl": { "value": "1.5rem" },
+    "full": { "value": "9999px" }
+  },
+  "shadow": {
+    "sm": {
+      "value": {
+        "offset-x": "0px",
+        "offset-y": "1px",
+        "blur": "2px",
+        "spread": "0px",
+        "color": "#000",
+        "opacity": 0.05
+      }
+    },
+    "default": {
+      "value": [
+        {
+          "offset-x": "0px",
+          "offset-y": "1px",
+          "blur": "3px",
+          "spread": "0px",
+          "color": "#000",
+          "opacity": 0.1
+        },
+        {
+          "offset-x": "0px",
+          "offset-y": "1px",
+          "blur": "2px",
+          "spread": "-1px",
+          "color": "#000",
+          "opacity": 0.1
+        }
+      ]
+    },
+    "md": {
+      "value": [
+        {
+          "offset-x": "0px",
+          "offset-y": "4px",
+          "blur": "6px",
+          "spread": "-1px",
+          "color": "#000",
+          "opacity": 0.1
+        },
+        {
+          "offset-x": "0px",
+          "offset-y": "2px",
+          "blur": "4px",
+          "spread": "-2px",
+          "color": "#000",
+          "opacity": 0.1
+        }
+      ]
+    },
+    "lg": {
+      "value": [
+        {
+          "offset-x": "0px",
+          "offset-y": "10px",
+          "blur": "15px",
+          "spread": "-3px",
+          "color": "#000",
+          "opacity": 0.1
+        },
+        {
+          "offset-x": "0px",
+          "offset-y": "4px",
+          "blur": "6px",
+          "spread": "-4px",
+          "color": "#000",
+          "opacity": 0.1
+        }
+      ]
+    },
+    "xl": {
+      "value": [
+        {
+          "offset-x": "0px",
+          "offset-y": "20px",
+          "blur": "25px",
+          "spread": "-5px",
+          "color": "{color.blue.4}",
+          "opacity": 0.1
+        },
+        {
+          "offset-x": "0px",
+          "offset-y": "8px",
+          "blur": "10px",
+          "spread": "-6px",
+          "color": "#000",
+          "opacity": 0.1
+        }
+      ]
+    },
+    "2xl": {
+      "value": {
+        "offset-x": "0px",
+        "offset-y": "25px",
+        "blur": "50px",
+        "spread": "-12px",
+        "color": "{color.blue.9}",
+        "opacity": 0.25
+      }
+    },
+    "none": {
+      "value": {
+        "offset-x": "0px",
+        "offset-y": "0px",
+        "blur": "0px",
+        "spread": "0px",
+        "color": "#000",
+        "opacity": 0
+      }
+    }
+  },
+  "font": {
+    "sans": {
+      "value": [
+        "system-ui",
+        "-apple-system",
+        "Segoe UI",
+        "Roboto",
+        "Ubuntu",
+        "Cantarell",
+        "Noto Sans",
+        "sans-serif"
+      ]
+    },
+    "serif": {
+      "value": ["ui-serif", "serif"]
+    },
+    "mono": {
+      "value": [
+        "Dank Mono",
+        "Operator Mono",
+        "Inconsolata",
+        "Fira Mono",
+        "ui-monospace",
+        "SF Mono",
+        "Monaco",
+        "Droid Sans Mono",
+        "Source Code Pro",
+        "monospace"
+      ]
+    }
+  },
+  "font-size": {
+    "xs": { "value": "0.75rem" },
+    "sm": { "value": "0.875rem" },
+    "default": { "value": "1rem" },
+    "lg": { "value": "1.125rem" },
+    "xl": { "value": "1.25rem" },
+    "2xl": { "value": "1.5rem" },
+    "3xl": { "value": "1.875rem" },
+    "4xl": { "value": "2.25rem" },
+    "5xl": { "value": "3rem" },
+    "6xl": { "value": "3.75rem" },
+    "7xl": { "value": "4.5rem" },
+    "8xl": { "value": "6rem" },
+    "9xl": { "value": "8rem" }
+  },
+  "font-weight": {
+    "thin": { "value": 100 },
+    "extralight": { "value": 200 },
+    "light": { "value": 300 },
+    "normal": { "value": 400 },
+    "medium": { "value": 500 },
+    "semibold": { "value": 600 },
+    "bold": { "value": 700 },
+    "extrabold": { "value": 800 },
+    "black": { "value": 900 }
+  },
+  "line-height": {
+    "none": { "value": 1 },
+    "tight": { "value": 1.25 },
+    "snug": { "value": 1.375 },
+    "normal": { "value": 1.5 },
+    "relaxed": { "value": 1.625 },
+    "loose": { "value": 2 }
+  },
+  "letter-spacing": {
+    "tighter": { "value": "-0.05em" },
+    "tight": { "value": "-0.025em" },
+    "normal": { "value": "0em" },
+    "wide": { "value": "0.025em" },
+    "wider": { "value": "0.05em" },
+    "widest": { "value": "0.1em" }
+  },
+  "easing": {
+    "sine": {
+      "in": { "value": [0.12, 0, 0.39, 0] },
+      "out": { "value": [0.61, 1, 0.88, 1] },
+      "in-out": { "value": [0.37, 0, 0.63, 1] }
+    },
+    "quad": {
+      "in": { "value": [0.11, 0, 0.5, 0] },
+      "out": { "value": [0.5, 1, 0.89, 1] },
+      "in-out": { "value": [0.45, 0, 0.55, 1] }
+    },
+    "cubic": {
+      "in": { "value": [0.32, 0, 0.67, 0] },
+      "out": { "value": [0.33, 1, 0.68, 1] },
+      "in-out": { "value": [0.65, 0, 0.35, 1] }
+    },
+    "quart": {
+      "in": { "value": [0.5, 0, 0.75, 0] },
+      "out": { "value": [0.25, 1, 0.5, 1] },
+      "in-out": { "value": [0.76, 0, 0.24, 1] }
+    },
+    "quint": {
+      "in": { "value": [0.64, 0, 0.78, 0] },
+      "out": { "value": [0.22, 1, 0.36, 1] },
+      "in-out": { "value": [0.83, 0, 0.17, 1] }
+    },
+    "expo": {
+      "in": { "value": [0.7, 0, 0.84, 0] },
+      "out": { "value": [0.16, 1, 0.3, 1] },
+      "in-out": { "value": [0.87, 0, 0.13, 1] }
+    },
+    "circ": {
+      "in": { "value": [0.55, 0, 1, 0.45] },
+      "out": { "value": [0, 0.55, 0.45, 1] },
+      "in-out": { "value": [0.85, 0, 0.15, 1] }
+    },
+    "back": {
+      "in": { "value": [0.36, 0, 0.66, -0.56] },
+      "out": { "value": [0.34, 1.56, 0.64, 1] },
+      "in-out": { "value": [0.68, -0.6, 0.32, 1.6] }
+    }
+  }
+}

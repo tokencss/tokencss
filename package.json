@@ -3,7 +3,8 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "test": "tsm node_modules/uvu/bin.js packages test -i fixtures -i test-utils.ts"
+    "test": "tsm node_modules/uvu/bin.js packages test -i fixtures -i test-utils.ts",
+    "dev": "pnpm --filter @tokencss/vscode run dev"
   },
   "devDependencies": {
     "esbuild": "^0.14.11",
