@@ -31,3 +31,4 @@ function createESMPlugin(name, filePath) {
 }
 
 module.exports = createESMPlugin('@tokencss/postcss', './dist/index.js');
+module.exports.loadConfig = async (...args) => import('./dist/index.js').then((mod) => mod.loadConfig(...args))
