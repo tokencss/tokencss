@@ -9,16 +9,17 @@ import { addHovers } from './features/hover';
 
 export async function activate(context: vscode.ExtensionContext) {
 	console.log('Token CSS activated');
-	
 
+	let didInit = false;
 	async function init(doc?: vscode.TextDocument) {
-		if (doc) {
+		if (!didInit && doc) {
+			didInit = true;
 			let config = await loadConfig({ cwd: doc.fileName });
 			let scanner = new Scanner({ config });
-			await addSemanticTokens(context, { scanner });
-			await addCompletionItems(context, { config, scanner });
-			await addDecorators(context, { config, scanner });
-			await addHovers(context, { config, scanner });
+			await addSemanticTokens(context, { scanner })
+			await addCompletionItems(context, { config, scanner })
+			await addDecorators(context, { config, scanner })
+			await addHovers(context, { config, scanner })
 		}
 	}
 	const doc = vscode.window.activeTextEditor?.document;

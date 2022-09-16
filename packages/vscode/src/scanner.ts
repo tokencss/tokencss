@@ -58,7 +58,7 @@ export class Scanner {
         const promises: any[] = [];
         await walk(nodes, (n) => {
             if (n.type === 1 && n.name === 'style') {
-                const cssText = n.children[0].value;
+                const cssText = (n.children.length > 0) ? n.children[0].value : '';
                 const offset = n.loc[0].end;
 
                 const startLines = text.slice(0, offset).split('\n');

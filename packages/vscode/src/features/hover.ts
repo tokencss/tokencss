@@ -1,11 +1,12 @@
 import * as vscode from 'vscode';
-import type { Scanner } from '../scanner';
+import type { Scanner, Token } from '../scanner';
 import { isMarkupDoc, isSupportedDoc } from '../utils';
 
 export async function addHovers(context: vscode.ExtensionContext, { config, scanner }: { config: any, scanner: Scanner }): Promise<vscode.Disposable> {
+    // @ts-expect-error
     const { resolveTokensByScale } = await import('@tokencss/core');
     const scales = await resolveTokensByScale(config);
-    const provider = vscode.languages.registerHoverProvider({ scheme: 'file'}, {
+    const provider = vscode.languages.registerHoverProvider({ scheme: 'file', language: 'astro' }, {
         async provideHover(doc, position, token) {
             if (!isSupportedDoc(doc)) return;
             if (isMarkupDoc(doc)) {
@@ -32,12 +33,41 @@ export async function addHovers(context: vscode.ExtensionContext, { config, scan
             });
             if (!match) return;
 
-            return new vscode.Hover(new vscode.MarkdownString(`${getIconForScale(match.scale)} **${match.scale}** ${match.value}\n\n\`\`\`\n${scales[match.scale][match.value].value}\n\`\`\``, true));
+            return new vscode.Hover(getDescription(match, scales[match.scale][match.value]));
         },
     })
 
     context.subscriptions.push(provider);
     return provider;
+}
+
+const getDescription = (token: Token, rawToken: any): vscode.MarkdownString => {
+    const description = new vscode.MarkdownString('');
+    const icon = getIconForScale(token.scale);
+    description.supportHtml = true;
+    description.supportThemeIcons = true;
+    description.isTrusted = true;
+
+    const title = [icon, `**${token.scale}**`, token.value, '\n\n'].join(' ');
+    description.appendMarkdown(title);
+
+    const { value } = rawToken;
+    switch (token.scale) {
+        case 'color': {
+            const svg = `<svg height="64" xmlns="http://www.w3.org/2000/svg"><rect width="256" height="64" fill="${value}"/></svg>`;
+            appendImage(description, svg);
+            break;
+        }
+    }
+    
+    description.appendCodeblock(`\n${value}`, 'plaintext');
+    return description;
+}
+
+function appendImage(value: vscode.MarkdownString, svg: string) {
+    svg = svg.replace(/[\<\>\\%=#"'\s]/g, (v) => encodeURIComponent(v))
+    const src = `data:image/svg+xml,${svg}`;
+    value.appendMarkdown(`\n\n<img src="${src}" width="256" height="64" alt="${value}">\n`)
 }
 
 const getIconForScale = (scale: string) => {

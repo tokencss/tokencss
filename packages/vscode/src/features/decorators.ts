@@ -2,16 +2,11 @@ import * as vscode from 'vscode';
 import type { Scanner } from '../scanner';
 import { isSupportedDoc } from '../utils';
 
-const DECORATION_TYPE = vscode.window.createTextEditorDecorationType({
-	before: {
-		contentText: '⬤',
-	}
-})
 const ranges = new Map<string, vscode.Range[]>();
 export async function addDecorators(context: vscode.ExtensionContext, { config, scanner }: { config: any, scanner: Scanner }): Promise<vscode.Disposable> {
+	const decorationTypes = new Map();
     async function updateDecorations(doc: vscode.TextDocument) {
         if (!isSupportedDoc(doc)) return;
-		// vscode.window.activeTextEditor?.setDecorations(DECORATION_TYPE, []);
 		// @ts-expect-error
 		const { resolveTokensByScale } = await import('@tokencss/core');
         const tokens = await scanner.getTokens(doc);
@@ -29,8 +24,18 @@ export async function addDecorators(context: vscode.ExtensionContext, { config, 
 			ranges.get(color)?.push(range);
         }
 		if (vscode.window.activeTextEditor?.document === doc) {
-			for (const [color, r] of ranges) {
-				vscode.window.activeTextEditor.setDecorations(DECORATION_TYPE, r.map(range => ({ range, renderOptions: { light: { before: { color, margin: '0 4px 0 0' } }, dark: { before: { color, margin: '0 4px 0 0' } }} })))
+			for (const type of decorationTypes.values()) {
+				vscode.window.activeTextEditor.setDecorations(type, [])
+			}
+			for (const [color, r] of ranges.entries()) {
+				const type = decorationTypes.get(color) ?? vscode.window.createTextEditorDecorationType({
+					before: {
+						contentText: '⬤',
+					},
+					light: { before: { color, margin: '0 4px 0 0' } }, dark: { before: { color, margin: '0 4px 0 0' } }
+				})
+				if (!decorationTypes.has(color)) decorationTypes.set(color, type);
+				vscode.window.activeTextEditor.setDecorations(type, r)
 			}
 		}
     }

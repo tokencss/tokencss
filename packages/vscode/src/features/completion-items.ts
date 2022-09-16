@@ -7,7 +7,7 @@ export async function addCompletionItems(context: vscode.ExtensionContext, { con
     // @ts-expect-error
     const { resolveTokensByScale, getTokensForProperty } = await import('@tokencss/core');
     const scales = await resolveTokensByScale(config);
-    const provider = vscode.languages.registerCompletionItemProvider({ scheme: 'file' }, {
+    const provider = vscode.languages.registerCompletionItemProvider({ scheme: 'file', language: 'astro' }, {
         async provideCompletionItems(doc, position, token, context) {
             const completionItems: vscode.CompletionItem[] = [];
             if (!isSupportedDoc(doc)) return;
@@ -22,12 +22,14 @@ export async function addCompletionItems(context: vscode.ExtensionContext, { con
                 }
                 if (!range) return;
                 const newRange = new vscode.Range(range.start, position);
-                const textToCursor = doc.getText(newRange);
+                let textToCursor = doc.getText(newRange);
                 let decl = '';
+                const openBrace = textToCursor.lastIndexOf('{');
+                textToCursor = textToCursor.slice(openBrace > -1 ? openBrace + 1 : 0);
                 if (textToCursor.includes(';')) {
-                    decl = textToCursor.slice(textToCursor.lastIndexOf(';') + 1)
+                    decl = textToCursor.slice(textToCursor.lastIndexOf(';') + 1).trim()
                 } else {
-                    decl = textToCursor.slice(textToCursor.lastIndexOf('{') + 1)
+                    decl = textToCursor.trim();
                 }
                 if (!decl.includes(':')) {
                     return;
@@ -41,7 +43,9 @@ export async function addCompletionItems(context: vscode.ExtensionContext, { con
                     if (value && !tokenName.startsWith(value)) continue;
                     const key = `${token.$scale}:${tokenName}`;
                     if (!unique.has(key)) {
-                        completionItems.push(tokenToCompletionItem(tokenName, token, context))
+                        const item = tokenToCompletionItem(tokenName, token, context);
+                        if (unique.size === 0) item.preselect = true;
+                        completionItems.push(item);
                         unique.add(key);
                     }
                 }
