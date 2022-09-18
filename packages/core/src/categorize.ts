@@ -174,11 +174,9 @@ export function categorize(property: string, value: string, ctx: { scales: Parti
         const scales = properties.get(property)!;
         for (const [scale, values] of Object.entries(ctx.scales)) {
             if (!scales.includes(scale)) continue;
-            for (const v of Object.values(values)) {
-                if (v && value === v) {
-                    cache.set(cacheKey, scale)
-                    return scale as Scale;
-                }
+            if (value in values) {
+                cache.set(cacheKey, scale)
+                return scale as Scale;
             }
         }
     } else {
@@ -191,4 +189,5 @@ export function categorize(property: string, value: string, ctx: { scales: Parti
             }
         }
     }
+    cache.set(cacheKey, undefined);
 }
