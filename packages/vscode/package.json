@@ -1,11 +1,13 @@
 {
   "name": "tokencss-vscode",
   "displayName": "Token CSS",
+  "description": "Fully integrated editor support for Token CSS",
   "version": "0.0.1",
+  "author": "Nate Moore",
   "publisher": "tokencss",
   "license": "MIT",
   "engines": {
-    "vscode": "^1.42.0"
+    "vscode": "^1.67.0"
   },
   "categories": [
     "Other"
@@ -13,7 +15,7 @@
   "activationEvents": [
     "workspaceContains:**/token.config.json"
   ],
-  "main": "./out/extension.js",
+  "main": "./dist/extension.js",
   "contributes": {
     "semanticTokenTypes": [
       {
@@ -24,23 +26,16 @@
     ]
   },
   "scripts": {
-    "dev": "tsc -watch -p ./",
-    "build": "tsc -p ./",
-    "lint": "eslint . --ext .ts,.tsx",
-    "vscode:prepublish": "npm run build"
+    "build": "node ./scripts/build-node.js",
+    "dev": "pnpm build:node --watch",
+    "build:ci:node": "pnpm build:node"
   },
   "devDependencies": {
     "@types/node": "^16.11.7",
     "@types/vscode": "^1.42.0",
-    "@typescript-eslint/eslint-plugin": "^5.30.0",
-    "@typescript-eslint/parser": "^5.30.0",
-    "eslint": "^8.13.0",
-    "typescript": "^4.7.2"
-  },
-  "dependencies": {
     "@tokencss/core": "^0.0.1",
     "@tokencss/postcss": "^0.0.3",
-    "postcss": "^8.4.5",
+    "postcss": "^8.4.6",
     "postcss-preset-env": "^7.8.1",
     "postcss-safe-parser": "^6.0.0",
     "ultrahtml": "^0.0.5"

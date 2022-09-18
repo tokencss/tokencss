@@ -4,16 +4,19 @@
   "license": "MIT",
   "scripts": {
     "test": "tsm node_modules/uvu/bin.js packages test -i fixtures -i test-utils.ts",
-    "dev": "pnpm --filter @tokencss/vscode run dev"
+    "dev": "pnpm --filter tokencss-vscode run dev",
+    "build": "pnpm --filter tokencss-vscode run build"
   },
   "devDependencies": {
     "esbuild": "^0.14.11",
     "tsm": "^2.2.1",
     "uvu": "^0.5.3"
   },
-  "volta": {
-    "node": "16.13.2"
+  "engines": {
+    "node": "^14.18.0 || >=16.12.0",
+    "pnpm": ">=7.9.5"
   },
+  "packageManager": "pnpm@7.9.5",
   "dependencies": {
     "@changesets/cli": "^2.21.1"
   }
