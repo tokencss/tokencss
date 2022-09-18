@@ -6,15 +6,20 @@ import MagicString from 'magic-string';
 import { resolveTokens, resolveTokensByScale, categorize, pathToVarName, serializeTokensToCSS } from '@tokencss/core';
 import { loadConfig } from './config.js';
 
+export { loadConfig } from './config.js';
+
 export interface TokenCSSOptions {
     cwd?: string;
     config?: Record<string, any>;
+    onToken?: (...args: any) => any;
 }
 
 interface TokenNode extends WordNode {
     token: string;
+    scale: string;
 }
-function findTokens(nodes: Node[], prop: string, scales: any): (WordNode & { token: string })[] {
+
+function findTokens(nodes: Node[], prop: string, scales: any): TokenNode[] {
     const words: TokenNode[] = [];
     function walk(n: Node|Node[], parent?: Node) {
         if (Array.isArray(n)) {
@@ -33,7 +38,7 @@ function findTokens(nodes: Node[], prop: string, scales: any): (WordNode & { tok
                         if (parent?.type === 'function' && parent?.value.startsWith('rgb')) {
                             varName += '-rgb';
                         }
-                        words.push(Object.assign(n, { token: varName }));
+                        words.push(Object.assign(n, { token: varName, scale }));
                     }
                 }
                 return;
@@ -44,7 +49,7 @@ function findTokens(nodes: Node[], prop: string, scales: any): (WordNode & { tok
     return words;
 }
 
-const tokencss: postcss.PluginCreator<TokenCSSOptions> = ({ cwd = process.cwd(), config } = {}) => {
+const tokencss: postcss.PluginCreator<TokenCSSOptions> = ({ cwd = process.cwd(), config, onToken } = {}) => {
     let promise = config ? null : loadConfig({ cwd });
     let tokens: Record<string, any>|undefined = config ? resolveTokensByScale(config) : undefined;
     let flatTokens = config ? resolveTokens(config) : undefined;
@@ -118,6 +123,10 @@ const tokencss: postcss.PluginCreator<TokenCSSOptions> = ({ cwd = process.cwd(),
 
             const tokenNodes = findTokens(nodes, prop, tokens);
             for (const t of tokenNodes) {
+                if (onToken) {
+                    const range = decl.rangeBy({ word: t.value, index: t.sourceIndex, endIndex: t.sourceEndIndex })
+                    onToken({ value: t.value, scale: t.scale, range })
+                }
                 s.overwrite(t.sourceIndex, t.sourceEndIndex, `var(${t.token})`);
                 // TODO: add sourcemap to `result.map`
             }

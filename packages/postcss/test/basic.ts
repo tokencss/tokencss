@@ -140,4 +140,16 @@ test("@inject \"tokencss:container\";", async () => {
   );
 });
 
+test("sizes", async () => {
+  const { postcss } = setup();
+  const { css } = await postcss.run("div { width: lg }", {
+    plugins: [
+      tokencss({
+        config: { size: { lg: { value: "2rem" } } },
+      }),
+    ],
+  });
+  assert.match(css, "var(--size-lg)", "transforms width lg to --size-lg");
+});
+
 test.run();

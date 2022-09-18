@@ -1,4 +1,4 @@
-import type { Scale } from './types';
+import type { Scale, Token } from './types';
 
 function directional(name: string, alias = name.charAt(0)) {
     return [
@@ -81,6 +81,12 @@ const scales: Partial<Record<Scale, string[]>> = {
         'border-bottom-left-radius',
         'border-bottom-right-radius'
     ],
+    easing: [
+        'animation',
+        'animation-timing-function',
+        'transition',
+        'transition-timing-function',
+    ],
     font: [
         'f',
         'font',
@@ -130,6 +136,26 @@ const properties = new Map([
     ['max-height', ['height', 'size', 'space']],
 ]);
 
+export function getTokensForProperty(property: string, ctx: { scales: Partial<Record<Scale, string[]>> }): ([string, Token])[] {
+    // normalize custom property declarations
+    if (property.charAt(0) === '-' && property.charAt(1) === '-') {
+        property = property.slice(2);
+    }
+    const categories = properties.get(property) ?? [];
+    const tokens: [string, Token][] = []
+    for (const scale of categories) {
+        tokens.push(Object.entries(ctx.scales[scale] ?? {}) as any);
+    }
+    for (const [scale, props] of Object.entries(scales)) {
+        for (const p of props) {
+            if (property === p) {
+                tokens.push(Object.entries(ctx.scales[scale] ?? {}) as any)
+            }
+        }
+    }
+    return tokens.flat(1) as any;
+}
+
 const cache = new Map();
 export function categorize(property: string, value: string, ctx: { scales: Partial<Record<Scale, string[]>> }): Scale|undefined {
     // ignore custom property values
@@ -145,14 +171,12 @@ export function categorize(property: string, value: string, ctx: { scales: Parti
         return cache.get(cacheKey)
     }
     if (properties.has(property)) {
-        const scales = properties.get(property);
+        const scales = properties.get(property)!;
         for (const [scale, values] of Object.entries(ctx.scales)) {
             if (!scales.includes(scale)) continue;
-            for (const v of Object.values(values)) {
-                if (value === v) {
-                    cache.set(cacheKey, scale)
-                    return scale as Scale;
-                }
+            if (value in values) {
+                cache.set(cacheKey, scale)
+                return scale as Scale;
             }
         }
     } else {
@@ -165,4 +189,5 @@ export function categorize(property: string, value: string, ctx: { scales: Parti
             }
         }
     }
+    cache.set(cacheKey, undefined);
 }

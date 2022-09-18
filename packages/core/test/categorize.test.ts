@@ -14,5 +14,9 @@ test('css vars', () => {
     const result = categorize('--m', 'lg', { scales: { space: ['sm', 'md', 'lg'] } })
     assert.is(result, 'space');
 })
+test('size', () => {
+    const result = categorize('width', 'lg', { scales: { size: ['sm', 'md', 'lg'] } })
+    assert.is(result, 'size');
+})
 
 test.run();

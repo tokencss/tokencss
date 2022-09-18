@@ -1,0 +1,43 @@
+{
+  "name": "tokencss-vscode",
+  "displayName": "Token CSS",
+  "description": "Fully integrated editor support for Token CSS",
+  "version": "0.0.1",
+  "author": "Nate Moore",
+  "publisher": "tokencss",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.67.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "workspaceContains:**/token.config.json"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "semanticTokenTypes": [
+      {
+        "id": "token",
+        "superType": "keyword",
+        "description": "A design token"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node ./scripts/build-node.js",
+    "dev": "pnpm build:node --watch",
+    "build:ci:node": "pnpm build:node"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "@types/vscode": "^1.42.0",
+    "@tokencss/core": "^0.0.1",
+    "@tokencss/postcss": "^0.0.3",
+    "postcss": "^8.4.6",
+    "postcss-preset-env": "^7.8.1",
+    "postcss-safe-parser": "^6.0.0",
+    "ultrahtml": "^0.0.5"
+  }
+}
