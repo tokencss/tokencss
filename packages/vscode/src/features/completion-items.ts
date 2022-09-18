@@ -1,11 +1,11 @@
 import * as vscode from 'vscode';
 import type { Scanner } from '../scanner';
 import { isMarkupDoc, isSupportedDoc } from '../utils';
+// @ts-expect-error
+import { resolveTokensByScale, getTokensForProperty } from '@tokencss/core';
 
 const TRIGGER_CHARS = ['.', ':', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 export async function addCompletionItems(context: vscode.ExtensionContext, { config, scanner }: { config: any, scanner: Scanner }): Promise<vscode.Disposable> {
-    // @ts-expect-error
-    const { resolveTokensByScale, getTokensForProperty } = await import('@tokencss/core');
     const scales = await resolveTokensByScale(config);
     const provider = vscode.languages.registerCompletionItemProvider({ scheme: 'file', language: 'astro' }, {
         async provideCompletionItems(doc, position, token, context) {

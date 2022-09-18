@@ -1,10 +1,10 @@
 import * as vscode from 'vscode';
 import type { Scanner, Token } from '../scanner';
 import { isMarkupDoc, isSupportedDoc } from '../utils';
+// @ts-expect-error
+import { resolveTokensByScale } from '@tokencss/core';
 
 export async function addHovers(context: vscode.ExtensionContext, { config, scanner }: { config: any, scanner: Scanner }): Promise<vscode.Disposable> {
-    // @ts-expect-error
-    const { resolveTokensByScale } = await import('@tokencss/core');
     const scales = await resolveTokensByScale(config);
     const provider = vscode.languages.registerHoverProvider({ scheme: 'file', language: 'astro' }, {
         async provideHover(doc, position, token) {

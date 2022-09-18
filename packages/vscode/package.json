@@ -1,6 +1,7 @@
 {
   "name": "tokencss-vscode",
   "displayName": "Token CSS",
+  "icon": "./assets/icon.png",
   "description": "Fully integrated editor support for Token CSS",
   "version": "0.0.1",
   "author": "Nate Moore",
@@ -17,6 +18,12 @@
   ],
   "main": "./dist/extension.js",
   "contributes": {
+    "jsonValidation": [
+      {
+        "fileMatch": "token.config.json",
+        "url": "https://tokencss.com/schema@0.0.1"
+      }
+    ],
     "semanticTokenTypes": [
       {
         "id": "token",
