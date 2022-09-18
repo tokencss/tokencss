@@ -1,5 +1,11 @@
 # @tokencss/astro
 
+## 0.0.3
+
+### Patch Changes
+
+- 0c9bcab: Update package.json metadata
+
 ## 0.0.2
 
 ### Patch Changes
