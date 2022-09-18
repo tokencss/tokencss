@@ -3,9 +3,11 @@
   "private": true,
   "license": "MIT",
   "scripts": {
+    "version": "changeset version",
+    "release": "pnpm build && changeset publish",
     "test": "tsm node_modules/uvu/bin.js packages test -i fixtures -i test-utils.ts",
     "dev": "pnpm --filter tokencss-vscode run dev",
-    "build": "pnpm --filter tokencss-vscode run build"
+    "build": "pnpm -r run build"
   },
   "devDependencies": {
     "esbuild": "^0.14.11",
