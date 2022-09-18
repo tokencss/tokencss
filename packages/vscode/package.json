@@ -45,7 +45,8 @@
     "postcss": "^8.4.6",
     "postcss-preset-env": "^7.8.1",
     "postcss-safe-parser": "^6.0.0",
-    "ultrahtml": "^0.0.5"
+    "ultrahtml": "^0.0.5",
+    "vsce": "^2.11.0"
   },
   "repository": {
     "type": "git",
