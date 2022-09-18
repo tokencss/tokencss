@@ -11,5 +11,12 @@
   "dependencies": {
     "@tokencss/postcss": "workspace:*",
     "postcss-preset-env": "^7.2.3"
-  }
+  },
+  "keywords": [
+    "astro",
+    "withastro",
+    "astro-integration",
+    "astro-component",
+    "css"
+  ]
 }
