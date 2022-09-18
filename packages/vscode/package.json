@@ -33,8 +33,8 @@
   "devDependencies": {
     "@types/node": "^16.11.7",
     "@types/vscode": "^1.42.0",
-    "@tokencss/core": "^0.0.1",
-    "@tokencss/postcss": "^0.0.3",
+    "@tokencss/core": "^0.0.2",
+    "@tokencss/postcss": "^0.0.4",
     "postcss": "^8.4.6",
     "postcss-preset-env": "^7.8.1",
     "postcss-safe-parser": "^6.0.0",
