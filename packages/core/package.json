@@ -6,7 +6,8 @@
   "exports": {
     ".": "./dist/index.js",
     "./package.json": "./package.json",
-    "./token.config.json": "./token.config.json"
+    "./token.config.json": "./token.config.json",
+    "./preset": "./preset/token.config.json"
   },
   "scripts": {
     "dev": "esbuild src/index.ts src/css.ts src/categorize.ts src/tokens.ts --outdir=dist --target=es2020 --format=esm --platform=node --watch",

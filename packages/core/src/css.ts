@@ -36,7 +36,7 @@ export function serializeTokensToCSS(tokens: Tokens) {
     return sheet;
 }
 
-function serializeToken(token: Token) {
+export function serializeToken(token: Token) {
     switch (token.type) {
         case 'string': return `"${token.value}"`;
         case 'number': return `${token.value}`;

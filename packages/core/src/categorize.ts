@@ -172,7 +172,13 @@ export function categorize(property: string, value: string, ctx: { scales: Parti
     }
     if (properties.has(property)) {
         const scales = properties.get(property)!;
-        for (const [scale, values] of Object.entries(ctx.scales)) {
+        for (const [scale, values] of Object.entries(ctx.scales).sort(([nameA], [nameB]) => {
+            const aIndex = scales.indexOf(nameA);
+            const bIndex = scales.indexOf(nameB);
+            if (aIndex > bIndex) return 1;
+            if (aIndex < bIndex) return -1;
+            return 0;
+        })) {
             if (!scales.includes(scale)) continue;
             if (value in values) {
                 cache.set(cacheKey, scale)

@@ -1,7 +1,7 @@
 import dlv from 'dlv';
 import type { Scale, Token } from './types';
 
-function flatten(obj, path = []) {
+export function flatten(obj, path = []) {
   const flattened = {}
   Object.keys(obj).forEach((key) => {
     const value = obj[key]
