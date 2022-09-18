@@ -6,6 +6,8 @@ import safe from 'postcss-safe-parser';
 import env from 'postcss-preset-env';
 // @ts-expect-error
 import tokencss from '@tokencss/postcss';
+// @ts-expect-error
+import { parse, walk } from 'ultrahtml';
 
 import { isMarkupDoc, isStyleDoc } from './utils';
 
@@ -52,7 +54,6 @@ export class Scanner {
         const textCache = fileCache.get(fileName) ?? new Map();
         const rangeTextCache = RANGE_CACHE.get(fileName) ?? new Map();
 
-        const { parse, walk } = await import('ultrahtml')
         const nodes = await parse(text)
         const ranges: vscode.Range[] = [];
         const promises: any[] = [];
@@ -126,7 +127,7 @@ export class Scanner {
                     scanned.add(key);
                 }
             })
-        ]).process(text, { parser: safe, from: doc.fileName });
+        ]).process(text, { parser: safe, from: '' });
         return tokens;
     }
 }

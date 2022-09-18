@@ -1,14 +1,14 @@
 import * as vscode from 'vscode';
 import type { Scanner } from '../scanner';
 import { isSupportedDoc } from '../utils';
+// @ts-expect-error
+import { resolveTokensByScale } from '@tokencss/core';
 
 const ranges = new Map<string, vscode.Range[]>();
 export async function addDecorators(context: vscode.ExtensionContext, { config, scanner }: { config: any, scanner: Scanner }): Promise<vscode.Disposable> {
 	const decorationTypes = new Map();
     async function updateDecorations(doc: vscode.TextDocument) {
         if (!isSupportedDoc(doc)) return;
-		// @ts-expect-error
-		const { resolveTokensByScale } = await import('@tokencss/core');
         const tokens = await scanner.getTokens(doc);
 		const scales = await resolveTokensByScale(config);
 		

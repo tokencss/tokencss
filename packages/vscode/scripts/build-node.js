@@ -1,3 +1,5 @@
+const path = require('path');
+const { pathToFileURL } = require('url');
 const { watchMode } = require("./utils.js");
 const isDev = process.argv.includes("--watch");
 
@@ -11,10 +13,14 @@ require("esbuild")
     outdir: "./dist",
     external: ["vscode"],
     format: "cjs",
+    target: "node14",
     platform: "node",
     tsconfig: "./tsconfig.json",
     minify: isDev ? false : true,
     watch: isDev ? watchMode : false,
+    define: {
+      'import.meta.url': `"${pathToFileURL(path.resolve(__filename, '..', '..', 'dist', 'extension.js'))}"`,
+    },
     plugins: [
       {
         name: "umd2esm",
