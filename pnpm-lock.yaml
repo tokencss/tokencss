@@ -61,7 +61,7 @@ importers:
 
   packages/vite:
     specifiers:
-      '@tokencss/postcss': workspace:*
+      '@tokencss/postcss': ^0.0.4
       postcss-preset-env: ^7.2.3
     dependencies:
       '@tokencss/postcss': link:../postcss
