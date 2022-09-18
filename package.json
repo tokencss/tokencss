@@ -21,5 +21,13 @@
   "packageManager": "pnpm@7.9.5",
   "dependencies": {
     "@changesets/cli": "^2.21.1"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "postcss",
+        "postcss-*"
+      ]
+    }
   }
 }

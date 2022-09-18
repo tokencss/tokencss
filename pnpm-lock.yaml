@@ -612,6 +612,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       '@csstools/selector-specificity': 2.0.2_ktd6zevxe5zrlaqdpuavlaytw4
       postcss-selector-parser: 6.0.10
@@ -622,6 +625,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       '@csstools/selector-specificity': 2.0.2_pnx64jze6bptzcedy5bidi3zdi
       postcss: 8.4.16
@@ -633,6 +639,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       '@csstools/postcss-progressive-custom-properties': 1.3.0
       postcss-value-parser: 4.2.0
@@ -643,6 +652,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       '@csstools/postcss-progressive-custom-properties': 1.3.0_postcss@8.4.16
       postcss: 8.4.16
@@ -654,6 +666,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -663,6 +678,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-value-parser: 4.2.0
@@ -673,6 +691,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -682,6 +703,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-value-parser: 4.2.0
@@ -692,6 +716,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       '@csstools/postcss-progressive-custom-properties': 1.3.0
       postcss-value-parser: 4.2.0
@@ -702,6 +729,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       '@csstools/postcss-progressive-custom-properties': 1.3.0_postcss@8.4.16
       postcss: 8.4.16
@@ -713,6 +743,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       '@csstools/selector-specificity': 2.0.2_ktd6zevxe5zrlaqdpuavlaytw4
       postcss-selector-parser: 6.0.10
@@ -723,6 +756,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       '@csstools/selector-specificity': 2.0.2_pnx64jze6bptzcedy5bidi3zdi
       postcss: 8.4.16
@@ -734,6 +770,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -743,6 +782,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-value-parser: 4.2.0
@@ -753,6 +795,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -762,6 +807,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-value-parser: 4.2.0
@@ -772,6 +820,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       '@csstools/postcss-progressive-custom-properties': 1.3.0
       postcss-value-parser: 4.2.0
@@ -782,6 +833,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       '@csstools/postcss-progressive-custom-properties': 1.3.0_postcss@8.4.16
       postcss: 8.4.16
@@ -793,6 +847,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -802,6 +859,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-value-parser: 4.2.0
@@ -812,6 +872,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -821,6 +884,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-value-parser: 4.2.0
@@ -831,6 +897,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -840,6 +909,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-value-parser: 4.2.0
@@ -850,6 +922,9 @@ packages:
     engines: {node: ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -859,6 +934,9 @@ packages:
     engines: {node: ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-value-parser: 4.2.0
@@ -869,6 +947,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dev: false
 
   /@csstools/postcss-unset-value/1.0.2_postcss@8.4.16:
@@ -876,6 +957,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
     dev: true
@@ -886,6 +970,11 @@ packages:
     peerDependencies:
       postcss: ^8.2
       postcss-selector-parser: ^6.0.10
+    peerDependenciesMeta:
+      postcss:
+        optional: true
+      postcss-selector-parser:
+        optional: true
     dependencies:
       postcss-selector-parser: 6.0.10
     dev: false
@@ -896,6 +985,11 @@ packages:
     peerDependencies:
       postcss: ^8.2
       postcss-selector-parser: ^6.0.10
+    peerDependenciesMeta:
+      postcss:
+        optional: true
+      postcss-selector-parser:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-selector-parser: 6.0.10
@@ -1372,6 +1466,9 @@ packages:
     hasBin: true
     peerDependencies:
       postcss: ^8.1.0
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       browserslist: 4.21.3
       caniuse-lite: 1.0.30001399
@@ -1387,6 +1484,9 @@ packages:
     hasBin: true
     peerDependencies:
       postcss: ^8.1.0
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       browserslist: 4.21.3
       caniuse-lite: 1.0.30001399
@@ -1403,6 +1503,9 @@ packages:
     hasBin: true
     peerDependencies:
       postcss: ^8.1.0
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       browserslist: 4.19.1
       caniuse-lite: 1.0.30001299
@@ -1671,6 +1774,9 @@ packages:
     hasBin: true
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-selector-parser: 6.0.8
     dev: false
@@ -1681,6 +1787,9 @@ packages:
     hasBin: true
     peerDependencies:
       postcss: ^8.4
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-selector-parser: 6.0.10
     dev: false
@@ -1691,6 +1800,9 @@ packages:
     hasBin: true
     peerDependencies:
       postcss: ^8.4
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-selector-parser: 6.0.10
@@ -1702,6 +1814,9 @@ packages:
     hasBin: true
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-selector-parser: 6.0.8
     dev: false
@@ -1712,6 +1827,9 @@ packages:
     hasBin: true
     peerDependencies:
       postcss: ^8.4
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-selector-parser: 6.0.10
     dev: false
@@ -1722,6 +1840,9 @@ packages:
     hasBin: true
     peerDependencies:
       postcss: ^8.4
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-selector-parser: 6.0.10
@@ -1733,6 +1854,9 @@ packages:
     hasBin: true
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dev: false
 
   /css-prefers-color-scheme/6.0.3:
@@ -1741,6 +1865,9 @@ packages:
     hasBin: true
     peerDependencies:
       postcss: ^8.4
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dev: false
 
   /css-prefers-color-scheme/6.0.3_postcss@8.4.16:
@@ -1749,6 +1876,9 @@ packages:
     hasBin: true
     peerDependencies:
       postcss: ^8.4
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
     dev: true
@@ -3964,6 +4094,9 @@ packages:
     resolution: {integrity: sha512-b4g9eagFGq9T5SWX4+USfVyjIb3liPnjhHHRMP7FMB2kFVpYyfEscV0wP3eaXhKlcHKUut8lt5BGoeylWA/dBQ==}
     peerDependencies:
       postcss: ^8.0.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-selector-parser: 6.0.8
     dev: false
@@ -3973,6 +4106,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-selector-parser: 6.0.10
     dev: false
@@ -3982,6 +4118,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-selector-parser: 6.0.10
@@ -3992,6 +4131,9 @@ packages:
     engines: {node: '>=7.6.0'}
     peerDependencies:
       postcss: ^8.4.6
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -4001,6 +4143,9 @@ packages:
     engines: {node: '>=7.6.0'}
     peerDependencies:
       postcss: ^8.4.6
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-value-parser: 4.2.0
@@ -4011,6 +4156,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -4020,6 +4168,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -4029,6 +4180,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-value-parser: 4.2.0
@@ -4039,6 +4193,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -4048,6 +4205,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.4
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -4057,6 +4217,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.4
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-value-parser: 4.2.0
@@ -4067,6 +4230,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -4076,6 +4242,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -4085,6 +4254,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-value-parser: 4.2.0
@@ -4095,6 +4267,9 @@ packages:
     engines: {node: '>=10.0.0'}
     peerDependencies:
       postcss: ^8.1.0
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dev: false
 
   /postcss-custom-media/8.0.2:
@@ -4102,6 +4277,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -4111,6 +4289,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-value-parser: 4.2.0
@@ -4121,6 +4302,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -4130,6 +4314,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.4
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -4139,6 +4326,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.4
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-value-parser: 4.2.0
@@ -4149,6 +4339,9 @@ packages:
     engines: {node: '>=10.0.0'}
     peerDependencies:
       postcss: ^8.1.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-selector-parser: 6.0.8
     dev: false
@@ -4158,6 +4351,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-selector-parser: 6.0.8
     dev: false
@@ -4167,6 +4363,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-selector-parser: 6.0.8
@@ -4177,6 +4376,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-selector-parser: 6.0.8
     dev: false
@@ -4186,6 +4388,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-selector-parser: 6.0.10
     dev: false
@@ -4195,6 +4400,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-selector-parser: 6.0.10
@@ -4205,6 +4413,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -4214,6 +4425,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       '@csstools/postcss-progressive-custom-properties': 1.3.0
       postcss-value-parser: 4.2.0
@@ -4224,6 +4438,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       '@csstools/postcss-progressive-custom-properties': 1.3.0_postcss@8.4.16
       postcss: 8.4.16
@@ -4235,6 +4452,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -4244,6 +4464,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.4
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -4253,6 +4476,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.4
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-value-parser: 4.2.0
@@ -4263,6 +4489,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-selector-parser: 6.0.8
     dev: false
@@ -4272,6 +4501,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.4
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-selector-parser: 6.0.10
     dev: false
@@ -4281,6 +4513,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.4
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-selector-parser: 6.0.10
@@ -4291,6 +4526,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-selector-parser: 6.0.8
     dev: false
@@ -4300,6 +4538,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.4
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-selector-parser: 6.0.10
     dev: false
@@ -4309,6 +4550,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.4
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-selector-parser: 6.0.10
@@ -4318,12 +4562,18 @@ packages:
     resolution: {integrity: sha512-1fmkBaCALD72CK2a9i468mA/+tr9/1cBxRRMXOUaZqO43oWPR5imcyPjXwuv7PXbCid4ndlP5zWhidQVVa3hmA==}
     peerDependencies:
       postcss: ^8.1.0
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dev: false
 
   /postcss-font-variant/5.0.0_postcss@8.4.16:
     resolution: {integrity: sha512-1fmkBaCALD72CK2a9i468mA/+tr9/1cBxRRMXOUaZqO43oWPR5imcyPjXwuv7PXbCid4ndlP5zWhidQVVa3hmA==}
     peerDependencies:
       postcss: ^8.1.0
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
     dev: true
@@ -4333,6 +4583,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dev: false
 
   /postcss-gap-properties/3.0.5:
@@ -4340,6 +4593,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dev: false
 
   /postcss-gap-properties/3.0.5_postcss@8.4.16:
@@ -4347,6 +4603,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
     dev: true
@@ -4356,6 +4615,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -4365,6 +4627,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -4374,6 +4639,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-value-parser: 4.2.0
@@ -4383,12 +4651,18 @@ packages:
     resolution: {integrity: sha512-0ueD7rPqX8Pn1xJIjay0AZeIuDoF+V+VvMt/uOnn+4ezUKhZM/NokDeP6DwMNyIoYByuN/94IQnt5FEkaN59xQ==}
     peerDependencies:
       postcss: ^8.0.0
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dev: false
 
   /postcss-initial/4.0.1_postcss@8.4.16:
     resolution: {integrity: sha512-0ueD7rPqX8Pn1xJIjay0AZeIuDoF+V+VvMt/uOnn+4ezUKhZM/NokDeP6DwMNyIoYByuN/94IQnt5FEkaN59xQ==}
     peerDependencies:
       postcss: ^8.0.0
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
     dev: true
@@ -4398,6 +4672,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -4407,6 +4684,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       '@csstools/postcss-progressive-custom-properties': 1.3.0
       postcss-value-parser: 4.2.0
@@ -4417,6 +4697,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       '@csstools/postcss-progressive-custom-properties': 1.3.0_postcss@8.4.16
       postcss: 8.4.16
@@ -4445,6 +4728,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dev: false
 
   /postcss-logical/5.0.4:
@@ -4452,6 +4738,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.4
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dev: false
 
   /postcss-logical/5.0.4_postcss@8.4.16:
@@ -4459,6 +4748,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.4
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
     dev: true
@@ -4468,6 +4760,9 @@ packages:
     engines: {node: '>=10.0.0'}
     peerDependencies:
       postcss: ^8.1.0
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dev: false
 
   /postcss-media-minmax/5.0.0_postcss@8.4.16:
@@ -4475,6 +4770,9 @@ packages:
     engines: {node: '>=10.0.0'}
     peerDependencies:
       postcss: ^8.1.0
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
     dev: true
@@ -4484,6 +4782,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       '@csstools/selector-specificity': 2.0.2_ktd6zevxe5zrlaqdpuavlaytw4
       postcss-selector-parser: 6.0.10
@@ -4494,6 +4795,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       '@csstools/selector-specificity': 2.0.2_pnx64jze6bptzcedy5bidi3zdi
       postcss: 8.4.16
@@ -4505,6 +4809,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-selector-parser: 6.0.8
     dev: false
@@ -4518,6 +4825,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dev: false
 
   /postcss-overflow-shorthand/3.0.4:
@@ -4525,6 +4835,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -4534,6 +4847,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-value-parser: 4.2.0
@@ -4543,12 +4859,18 @@ packages:
     resolution: {integrity: sha512-1JGu8oCjVXLa9q9rFTo4MbeeA5FMe00/9C7lN4va606Rdb+HkxXtXsmEDrIraQ11fGz/WvKWa8gMuCKkrXpTsQ==}
     peerDependencies:
       postcss: ^8
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dev: false
 
   /postcss-page-break/3.0.4_postcss@8.4.16:
     resolution: {integrity: sha512-1JGu8oCjVXLa9q9rFTo4MbeeA5FMe00/9C7lN4va606Rdb+HkxXtXsmEDrIraQ11fGz/WvKWa8gMuCKkrXpTsQ==}
     peerDependencies:
       postcss: ^8
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
     dev: true
@@ -4558,6 +4880,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -4567,6 +4892,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-value-parser: 4.2.0
     dev: false
@@ -4576,6 +4904,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-value-parser: 4.2.0
@@ -4586,6 +4917,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.4
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       autoprefixer: 10.4.2
       browserslist: 4.19.1
@@ -4627,6 +4961,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       '@csstools/postcss-cascade-layers': 1.0.6
       '@csstools/postcss-color-function': 1.1.1
@@ -4684,6 +5021,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       '@csstools/postcss-cascade-layers': 1.0.6_postcss@8.4.16
       '@csstools/postcss-color-function': 1.1.1_postcss@8.4.16
@@ -4742,6 +5082,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-selector-parser: 6.0.8
     dev: false
@@ -4751,6 +5094,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-selector-parser: 6.0.10
     dev: false
@@ -4760,6 +5106,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-selector-parser: 6.0.10
@@ -4769,12 +5118,18 @@ packages:
     resolution: {integrity: sha512-KmF7SBPphT4gPPcKZc7aDkweHiKEEO8cla/GjcBK+ckKxiZslIu3C4GCRW3DNfL0o7yW7kMQu9xlZ1kXRXLXtw==}
     peerDependencies:
       postcss: ^8.0.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dev: false
 
   /postcss-replace-overflow-wrap/4.0.0_postcss@8.4.16:
     resolution: {integrity: sha512-KmF7SBPphT4gPPcKZc7aDkweHiKEEO8cla/GjcBK+ckKxiZslIu3C4GCRW3DNfL0o7yW7kMQu9xlZ1kXRXLXtw==}
     peerDependencies:
       postcss: ^8.0.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
     dev: true
@@ -4784,6 +5139,9 @@ packages:
     engines: {node: '>=12.0'}
     peerDependencies:
       postcss: ^8.3.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
     dev: true
@@ -4792,6 +5150,9 @@ packages:
     resolution: {integrity: sha512-/2K3A4TCP9orP4TNS7u3tGdRFVKqz/E6pX3aGnriPG0jU78of8wsUcqE4QAhWEU0d+WnMSF93Ah3F//vUtK+iQ==}
     peerDependencies:
       postcss: ^8.1.0
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       balanced-match: 1.0.2
     dev: false
@@ -4801,6 +5162,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss-selector-parser: 6.0.10
     dev: false
@@ -4810,6 +5174,9 @@ packages:
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
+    peerDependenciesMeta:
+      postcss:
+        optional: true
     dependencies:
       postcss: 8.4.16
       postcss-selector-parser: 6.0.10
