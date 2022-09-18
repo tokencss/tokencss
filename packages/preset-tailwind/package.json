@@ -1,9 +1,0 @@
-{
-    "name": "@tokencss/preset-tailwind",
-    "version": "0.0.1",
-    "exports": {
-        ".": "./token.config.json",
-        "./package.json": "./package.json",
-        "./token.config.json": "./token.config.json"
-    }
-}
