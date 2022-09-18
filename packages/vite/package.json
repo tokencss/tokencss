@@ -7,11 +7,10 @@
     ".": "./index.js"
   },
   "scripts": {
-    "dev": "esbuild src/index.ts src/config.ts --outdir=dist --target=es2020 --format=esm --platform=node --watch",
-    "build": "esbuild src/index.ts src/config.ts --outdir=dist --target=es2020 --format=esm --platform=node"
+    "build": "echo 'done'"
   },
   "dependencies": {
-    "@tokencss/postcss": "workspace:*",
+    "@tokencss/postcss": "^0.0.4",
     "postcss-preset-env": "^7.2.3"
   }
 }
