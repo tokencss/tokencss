@@ -1,5 +1,11 @@
 # tokencss-vscode
 
+## 0.1.2
+
+### Patch Changes
+
+- 190fc97: Update semantic token types
+
 ## 0.1.1
 
 ### Patch Changes

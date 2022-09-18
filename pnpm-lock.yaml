@@ -56,12 +56,9 @@ importers:
     devDependencies:
       postcss: 8.4.5
 
-  packages/preset-tailwind:
-    specifiers: {}
-
   packages/vite:
     specifiers:
-      '@tokencss/postcss': ^0.0.4
+      '@tokencss/postcss': ^0.0.5
       postcss-preset-env: ^7.2.3
     dependencies:
       '@tokencss/postcss': link:../postcss
@@ -69,8 +66,8 @@ importers:
 
   packages/vscode:
     specifiers:
-      '@tokencss/core': ^0.0.2
-      '@tokencss/postcss': ^0.0.4
+      '@tokencss/core': ^0.1.0
+      '@tokencss/postcss': ^0.0.5
       '@types/node': ^16.11.7
       '@types/vscode': ^1.42.0
       postcss: ^8.4.6

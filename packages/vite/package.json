@@ -1,6 +1,6 @@
 {
   "name": "@tokencss/vite",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -10,7 +10,7 @@
     "build": "echo 'done'"
   },
   "dependencies": {
-    "@tokencss/postcss": "^0.0.4",
+    "@tokencss/postcss": "^0.0.5",
     "postcss-preset-env": "^7.2.3"
   }
 }
