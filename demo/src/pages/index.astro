@@ -1,4 +1,5 @@
 ---
+import Box from "../component/Box.astro";
 ---
 
 <html lang="en">
@@ -12,9 +13,34 @@
   <body>
     <h1>Astro x TokenCSS</h1>
 
+    <ul>
+      {
+        ["blue", "red", "green"].map((color: any) => (
+          <li>
+            <Box color={color} />
+          </li>
+        ))
+      }
+    </ul>
+
     <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        display: flex;
+        list-style: none;
+        gap: sm;
+      }
+      body {
+        padding: lg;
+      }
       h1 {
         font-family: sans;
+        color: gray.8;
+        margin-bottom: md;
       }
     </style>
   </body>

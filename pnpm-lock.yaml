@@ -18,7 +18,7 @@ importers:
   demo:
     specifiers:
       '@tokencss/astro': workspace:*
-      '@tokencss/core': workspace:^0.0.2
+      '@tokencss/core': workspace:*
       astro: ^1.2.4
     dependencies:
       '@tokencss/astro': link:../packages/astro

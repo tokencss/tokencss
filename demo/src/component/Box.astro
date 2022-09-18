@@ -1,0 +1,22 @@
+---
+import { tokens } from "@tokencss/core";
+
+interface Props {
+  color?: "blue" | "red" | "green";
+}
+
+const { color } = Astro.props;
+---
+
+<div class="box"></div>
+
+<style define:vars={tokens({ color: `${color}.6` })}>
+  .box {
+    --size: 4xl;
+    background: var(--color);
+    width: var(--size);
+    height: var(--size);
+    box-shadow: xl;
+    border-radius: lg;
+  }
+</style>
