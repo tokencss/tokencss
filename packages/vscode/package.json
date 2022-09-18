@@ -27,8 +27,8 @@
   },
   "scripts": {
     "build": "node ./scripts/build-node.js",
-    "dev": "pnpm build:node --watch",
-    "build:ci:node": "pnpm build:node"
+    "dev": "pnpm run build --watch",
+    "build:ci:node": "pnpm run build"
   },
   "devDependencies": {
     "@types/node": "^16.11.7",
