@@ -18,8 +18,9 @@ require("esbuild")
     tsconfig: "./tsconfig.json",
     minify: isDev ? false : true,
     watch: isDev ? watchMode : false,
+    inject: ['./import-meta.js'],
     define: {
-      'import.meta.url': `"${pathToFileURL(path.resolve(__filename, '..', '..', 'dist', 'extension.js'))}"`,
+      'import.meta': `import_meta`,
     },
     plugins: [
       {
