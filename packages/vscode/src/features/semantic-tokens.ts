@@ -13,8 +13,21 @@ const TOKEN_TYPES = [
 ]
 const TOKEN_TYPES_LEGEND = createLegend(TOKEN_TYPES);
 const TOKEN_MODIFIERS = [
-    'color',
+	'color',
+    'shadow',
     'space',
+    'size',
+    'width',
+    'height',
+    'radius',
+    'font',
+    'font-size',
+    'font-weight',
+    'font-leading',
+    'font-tracking',
+    'easing', 
+    'media',
+    'unknown'
 ]
 const TOKEN_MODIFIERS_LEGEND = createLegend(TOKEN_MODIFIERS);
 const LEGEND = new vscode.SemanticTokensLegend(TOKEN_TYPES, TOKEN_MODIFIERS)
@@ -61,7 +74,7 @@ class DocumentSemanticTokensProvider implements vscode.DocumentSemanticTokensPro
 			if (TOKEN_MODIFIERS_LEGEND.has(tokenModifier)) {
 				result = result | (1 << TOKEN_MODIFIERS_LEGEND.get(tokenModifier)!);
 			} else {
-				result = result | (1 << TOKEN_MODIFIERS_LEGEND.size + 2);
+				result = result | (1 << TOKEN_MODIFIERS_LEGEND.size - 1);
 			}
 		}
 		return result;

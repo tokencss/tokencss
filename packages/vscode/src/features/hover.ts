@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 import type { Scanner, Token } from '../scanner';
 import { isMarkupDoc, isSupportedDoc } from '../utils';
 // @ts-expect-error
-import { resolveTokensByScale } from '@tokencss/core';
+import { resolveTokensByScale, serializeToken } from '@tokencss/core';
 
 export async function addHovers(context: vscode.ExtensionContext, { config, scanner }: { config: any, scanner: Scanner }): Promise<vscode.Disposable> {
     const scales = await resolveTokensByScale(config);
@@ -60,7 +60,8 @@ const getDescription = (token: Token, rawToken: any): vscode.MarkdownString => {
         }
     }
     
-    description.appendCodeblock(`\n${value}`, 'plaintext');
+    const cssValue = serializeToken(rawToken);
+    description.appendCodeblock(`\n${cssValue}`, 'plaintext');
     return description;
 }
 
