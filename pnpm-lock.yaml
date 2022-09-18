@@ -69,8 +69,8 @@ importers:
 
   packages/vscode:
     specifiers:
-      '@tokencss/core': workspace:^0.0.1
-      '@tokencss/postcss': workspace:^0.0.3
+      '@tokencss/core': ^0.0.1
+      '@tokencss/postcss': ^0.0.3
       '@types/node': ^16.11.7
       '@types/vscode': ^1.42.0
       '@typescript-eslint/eslint-plugin': ^5.30.0
