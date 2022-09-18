@@ -3,7 +3,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "version": "changeset version",
+    "version": "changeset version && pnpm install --no-frozen-lockfile",
     "release": "pnpm build && changeset publish",
     "test": "tsm node_modules/uvu/bin.js packages test -i fixtures -i test-utils.ts",
     "dev": "pnpm --filter tokencss-vscode run dev",

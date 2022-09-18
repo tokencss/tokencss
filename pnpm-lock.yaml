@@ -18,7 +18,7 @@ importers:
   demo:
     specifiers:
       '@tokencss/astro': workspace:*
-      '@tokencss/core': workspace:^0.0.1
+      '@tokencss/core': workspace:^0.0.2
       astro: ^1.2.4
     dependencies:
       '@tokencss/astro': link:../packages/astro
@@ -69,8 +69,8 @@ importers:
 
   packages/vscode:
     specifiers:
-      '@tokencss/core': ^0.0.1
-      '@tokencss/postcss': ^0.0.3
+      '@tokencss/core': ^0.0.2
+      '@tokencss/postcss': ^0.0.4
       '@types/node': ^16.11.7
       '@types/vscode': ^1.42.0
       postcss: ^8.4.6
