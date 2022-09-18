@@ -8,7 +8,7 @@ on:
 jobs:
   release:
     name: Changelog
-    if: ${{ github.repository_owner == 'natemoo-re' }}
+    if: ${{ github.repository_owner == 'tokencss' }}
     runs-on: ubuntu-latest
     steps:
       - name: Check out branch
