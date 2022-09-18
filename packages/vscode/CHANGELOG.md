@@ -1,5 +1,11 @@
 # tokencss-vscode
 
+## 0.1.1
+
+### Patch Changes
+
+- 3e9a2d4: Fix `import.meta` shim
+
 ## 0.1.0
 
 ### Minor Changes
