@@ -3,7 +3,7 @@
   "displayName": "Token CSS",
   "icon": "assets/icon.png",
   "description": "Fully integrated editor support for Token CSS",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "Nate Moore",
   "publisher": "tokencss",
   "license": "MIT",

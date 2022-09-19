@@ -1,5 +1,11 @@
 # tokencss-vscode
 
+## 0.1.3
+
+### Patch Changes
+
+- d582610: Enable semantic tokens for all languages
+
 ## 0.1.2
 
 ### Patch Changes
