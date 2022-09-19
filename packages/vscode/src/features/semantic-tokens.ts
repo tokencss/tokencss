@@ -3,7 +3,7 @@ import type { Scanner } from '../scanner';
 import { isSupportedDoc } from '../utils';
 
 export async function addSemanticTokens(context: vscode.ExtensionContext, { scanner }: { scanner: Scanner }): Promise<vscode.Disposable> {
-    const provider = vscode.languages.registerDocumentSemanticTokensProvider({ scheme: 'file', language: 'astro' }, new DocumentSemanticTokensProvider({ scanner }), LEGEND)
+    const provider = vscode.languages.registerDocumentSemanticTokensProvider({ scheme: 'file' }, new DocumentSemanticTokensProvider({ scanner }), LEGEND)
 	context.subscriptions.push(provider);
     return provider;
 }

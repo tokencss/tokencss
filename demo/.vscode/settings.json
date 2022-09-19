@@ -1,4 +1,3 @@
 {
-  "editor.colorDecorators": false,
-  "astro.css.documentColors.enabled": false
+  "editor.colorDecorators": false
 }
