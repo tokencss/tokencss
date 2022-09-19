@@ -1,0 +1,40 @@
+:where(*) {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: sans;
+}
+
+.astro-code {
+  margin: lg 0;
+  padding: md;
+  border-radius: lg;
+  font-family: mono;
+  font-size: sm;
+  max-width: 100vw;
+
+  --background: gray.0;
+  --astro-code-color-background: var(--background);
+  --astro-code-token-function: var(--color-blue-7);
+  --astro-code-token-keyword: var(--color-gray-5);
+  --astro-code-color-text: var(--color-gray-7);
+  --astro-code-token-constant: var(--color-lime-6);
+
+  --astro-code-token-comment: var(--color-gray-6);
+}
+
+.astro-code span[style="color: var(--astro-code-token-constant)"]:nth-child(2) {
+  --astro-code-token-constant: var(--color-yellow-8);
+}
+
+.astro-code
+  span[style="color: var(--astro-code-token-constant)"]:nth-child(n + 3) {
+  text-decoration: underline;
+}
+
+.astro-code code {
+  font: inherit;
+}

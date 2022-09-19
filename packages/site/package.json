@@ -1,0 +1,21 @@
+{
+  "name": "@tokencss/docs",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@tokencss/astro": "workspace:*",
+    "@tokencss/core": "workspace:*",
+    "astro": "^1.2.4",
+    "astro-remote": "^0.0.1",
+    "gray-matter": "^4.0.3"
+  },
+  "license": "MIT"
+}

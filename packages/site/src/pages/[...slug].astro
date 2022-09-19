@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Base.astro";
+import { Markdown } from "astro-remote";
+import { getFiles } from "./_utils";
+
+export async function getStaticPaths() {
+  const files = await getFiles();
+
+  return files.map(({ params, props }) => {
+    return { params, props };
+  });
+}
+
+const { frontmatter, content } = Astro.props;
+---
+
+<Layout title={frontmatter.title} excerpt={frontmatter.description}>
+  <h1>{frontmatter.title}</h1>
+
+  <Markdown {content} components={{}} />
+</Layout>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 180 182">
+  <style>
+    g {
+      color: #2F333E;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      g {
+        color: #FFF;
+      }
+    }
+  </style>
+  <g>
+    <path fill="currentColor" fill-rule="evenodd"
+          d="M92.78 1.81 90.42.45 88.05 1.8 14.36 44.36 12 45.72v90.55l2.36 1.36 73.7 42.55 2.36 1.36 2.36-1.36 73.7-42.55 2.36-1.36V45.72l-2.37-1.36L92.78 1.8ZM47.31 71.57 21.45 56.64v74.17L85.7 167.9v-29.86a47.94 47.94 0 0 0 9.46 0v29.86l64.23-37.09V56.64l-25.85 14.93a47.2 47.2 0 0 0-4.74-8.19l25.87-14.93-64.24-37.09-64.24 37.09 25.86 14.93a47.22 47.22 0 0 0-4.73 8.19Z"
+          clip-rule="evenodd" />
+    <circle cx="90.42" cy="91" r="42.55" stroke="currentColor" stroke-width="9.45" />
+    <path fill="currentColor" d="M110.06 70.94a28.36 28.36 0 1 0-40.12 40.11 28.36 28.36 0 0 0 40.12-40.1Z" />
+  </g>
+</svg>

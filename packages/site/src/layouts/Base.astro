@@ -1,0 +1,56 @@
+---
+import "../main.css";
+import Head from "../components/Head.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  excerpt: string;
+}
+const { title, excerpt = "Your new favorite way to write CSS ✨" } =
+  Astro.props;
+
+const meta = {
+  title: `${title ? `${title} | ` : ""}Token CSS`,
+  description: excerpt,
+};
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <Head {...meta} />
+  </head>
+
+  <body>
+    <main>
+      <article>
+        <slot />
+      </article>
+      <Footer />
+    </main>
+
+    <style>
+      main {
+        display: flex;
+        flex-direction: column;
+        min-height: screen;
+      }
+
+      article {
+        width: 100%;
+        padding: lg sm;
+        max-width: 65ch;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+        gap: sm;
+      }
+    </style>
+  </body>
+</html>

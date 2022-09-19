@@ -56,6 +56,20 @@ importers:
     devDependencies:
       postcss: 8.4.5
 
+  packages/site:
+    specifiers:
+      '@tokencss/astro': workspace:*
+      '@tokencss/core': workspace:*
+      astro: ^1.2.4
+      astro-remote: ^0.0.1
+      gray-matter: ^4.0.3
+    dependencies:
+      '@tokencss/astro': link:../astro
+      '@tokencss/core': link:../core
+      astro: 1.2.4
+      astro-remote: 0.0.1
+      gray-matter: 4.0.3
+
   packages/vite:
     specifiers:
       '@tokencss/postcss': ^0.0.5
@@ -1389,6 +1403,13 @@ packages:
     engines: {node: '>=4'}
     dependencies:
       tslib: 2.4.0
+    dev: false
+
+  /astro-remote/0.0.1:
+    resolution: {integrity: sha512-kDN7t91u9WmrNPlyaSnaE4hFpQ+vPTEm3wkWhp062ifXNUXHUAyok1UjHGtgdfvwJPB0HvF8ChLZTR47J9SDNw==}
+    dependencies:
+      marked: 4.1.0
+      ultrahtml: 0.0.4
     dev: false
 
   /astro/1.2.4:
@@ -3565,6 +3586,12 @@ packages:
 
   /markdown-table/3.0.2:
     resolution: {integrity: sha512-y8j3a5/DkJCmS5x4dMCQL+OR0+2EAq3DOtio1COSHsmW2BGXnNCK3v12hJt1LrUz5iZH5g0LmuYOjDdI+czghA==}
+    dev: false
+
+  /marked/4.1.0:
+    resolution: {integrity: sha512-+Z6KDjSPa6/723PQYyc1axYZpYYpDnECDaU6hkaf5gqBieBkMKYReL5hteF2QizhlMbgbo8umXl/clZ67+GlsA==}
+    engines: {node: '>= 12'}
+    hasBin: true
     dev: false
 
   /mdast-util-definitions/5.1.1:
@@ -6104,7 +6131,7 @@ packages:
     dev: false
 
   /sprintf-js/1.0.3:
-    resolution: {integrity: sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=}
+    resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
     dev: false
 
   /stream-transform/2.1.3:
@@ -6397,6 +6424,10 @@ packages:
   /uc.micro/1.0.6:
     resolution: {integrity: sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==}
     dev: true
+
+  /ultrahtml/0.0.4:
+    resolution: {integrity: sha512-LcNKWPic3v5WXEmhpCwisEnhRPYg8qz00jpY9+vE/RrbbSmaxzJKLrdJgSdTdJCUf9VzwuYiGmc3G0ApfA0uiA==}
+    dev: false
 
   /ultrahtml/0.0.5:
     resolution: {integrity: sha512-AJp6H2lFQ7KB3t1m1n/gOqOWVBWXUwkXxZ6H4sv6t/ysiGfVvVmegIJ7WdNe5qo/EfsXrT/iLi+tBAYI0Jgiow==}
