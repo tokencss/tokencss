@@ -227,3 +227,7 @@ You're ready to use tokens in your CSS!
   --margin: sm;
 }
 ```
+
+## Editor integration
+
+Be sure to install our [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=tokencss.tokencss-vscode) extension for the best experience.
