@@ -7,6 +7,11 @@ like [Tailwind](https://tailwindcss.com), [Styled System](https://styled-system.
 
 ## Installation
 
+Install NPM packages if you haven't already;
+```shell
+npm install
+```
+
 Building your site with [Astro](https://astro.build)? Use the official Astro integration.
 
 ```shell
