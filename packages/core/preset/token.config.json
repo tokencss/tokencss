@@ -1,7 +1,7 @@
 {
   "$schema": "https://tokencss.com/schema@0.0.1",
   "media": {
-    // these tokens use cascading t-shirt sizes that shift 1 character up or down
+    // these tokens now only use two characters
     "type": "media",
     "xs": { "value": "(min-width: 360px)" },
     "sm": { "value": "(min-width: 640px)" },
@@ -10,8 +10,8 @@
     "ll": { "value": "(min-width: 1280px)" },
     "xl": { "value": "(min-width: 1440px)" }
   },
+  // ALL TOKENS HEREAFTER use semantical and numerical BOUM-tokens to ramp colors from the 'Base' to the max 'On or Under the base' (mob | base | mub) in steps of +/-1 relative to the 'base-line' you are currently on. The default is the 'base' at all times.
   "color": {
-    // these tokens use semantical and numerical BOUM-tokens to ramp colors from the base to the max On or Under the base (mob | base | mub) in steps of +/-1 relative to the "base-line" you are on
     "type": "color",
     "gray": {
       "mub": { "value": "#f8f9fa" },
