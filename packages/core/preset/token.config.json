@@ -3,12 +3,12 @@
   "media": {
     // these tokens now only use two characters
     "type": "media",
-    "xs": { "value": "(min-width: 360px)" },
-    "sm": { "value": "(min-width: 640px)" },
-    "md": { "value": "(min-width: 768px)" },
-    "ml": { "value": "(min-width: 1024px)" },
-    "ll": { "value": "(min-width: 1280px)" },
-    "xl": { "value": "(min-width: 1440px)" }
+    "ub2": { "value": "(min-width: 360px)" },
+    "ub1": { "value": "(min-width: 640px)" },
+    "base": { "value": "(min-width: 768px)" },
+    "ob1": { "value": "(min-width: 1024px)" },
+    "ob2": { "value": "(min-width: 1280px)" },
+    "ob3": { "value": "(min-width: 1440px)" }
   },
   // ALL TOKENS HEREAFTER use semantical and numerical BOUM-tokens to ramp colors from the 'Base' to the max 'On or Under the base' (mob | base | mub) in steps of +/-1 relative to the 'base-line' you are currently on. The default is the 'base' at all times.
   "color": {
@@ -400,12 +400,12 @@
     "extensions": {
       "com.tokencss.scale": "line-height"
     },
-    "mub": { "value": 1 },
+    "ub3": { "value": 1 },
     "ub2": { "value": 1.25 },
     "ub1": { "value": 1.375 },
     "base": { "value": 1.5 },
     "ob1": { "value": 1.625 },
-    "mob": { "value": 2 }
+    "ob2": { "value": 2 }
   },
   "letter-spacing": {
     "type": "dimension",
